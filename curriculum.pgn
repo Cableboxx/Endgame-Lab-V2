@@ -1,0 +1,112 @@
+[Event "Queen: shrink the box"]
+[Source "https://lichess.org/study/wukLYIXj/56iA0NCU"]
+[FEN "8/8/8/3k4/8/2Q5/4K3/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Qb4 Kc6 2. Qa5 Kb7 3. Qc5 Ka6 4. Qb4 Ka7 5. Qb5 Ka8 6. Kd3 Ka7 7. Kc4 Ka8 8. Kc5 Ka7 9. Kc6 Ka8 10. Qb7# *
+
+[Event "Rook: king and rook cooperate"]
+[Source "https://lichess.org/study/wukLYIXj/OPBv5FWe"]
+[FEN "8/8/8/8/8/3k4/1R6/3K4 w - - 0 1"]
+[SetUp "1"]
+
+1. Re2 Kc3 2. Rd2 Kb3 3. Rc2 Ka3 4. Kc1 Kb3 5. Kb1 Ka3 6. Rb2 Ka4 7. Kc2 Ka3 8. Kc3 Ka4 9. Rb1 Ka5 10. Kc4 Ka6 11. Kc5 Ka7 12. Kc6 Ka8 13. Kc7 Ka7 14. Ra1# *
+
+[Event "Two rooks: make room to work"]
+[Source "https://lichess.org/study/wukLYIXj/7SsNnILX"]
+[FEN "8/8/8/8/8/3k4/1R6/R3K3 w - - 0 1"]
+[SetUp "1"]
+
+1. Ra3+ Kc4 2. Rh2 Kb4 3. Rg3 Kc4 4. Rh4+ Kd5 5. Rg5+ Ke6 6. Rh6+ Kf7 7. Ra5 Kg7 8. Rb6 Kf7 9. Ra7+ Ke8 10. Rb8# *
+
+[Event "Lead with the king"]
+[Source "https://lichess.org/study/wukLYIXj/2ru3TC7p"]
+[FEN "8/3k4/8/8/3PK3/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Kd5 Kc7 2. Ke6 Kd8 3. Kd6 Ke8 4. Kc7 Ke7 5. d5 Ke8 6. d6 Kf7 7. d7 Ke7 8. d8=Q+ *
+
+[Event "Key squares and the spare tempo"]
+[Source "https://lichess.org/study/wukLYIXj/A1W1Huoz"]
+[FEN "8/3k4/8/8/4K3/3P4/8/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Kd5 Kc7 2. Ke6 Kd8 3. Kd6 Ke8 4. d4 Kd8 5. d5 Kc8 6. Ke7 Kc7 7. d6+ Kc8 8. d7+ Kc7 9. d8=Q+ *
+
+[Event "Hold the draw with opposition"]
+[Source "https://lichess.org/study/wukLYIXj/fHmVLjSJ"]
+[FEN "8/8/3k4/3P4/3K4/8/8/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Kd7 2. Ke5 Ke7 3. Ke4 Kd6 4. Kd4 Kd7 5. Kc5 Kc7 6. d6+ Kd7 7. Kd5 Kd8 8. Ke6 Ke8 9. Kd5 Kd7 10. Kc5 Kd8 11. Kc6 Kc8 12. d7+ Kd8 13. Kd6 *
+
+[Event "Can the king catch the pawn?"]
+[Source "https://lichess.org/study/UsqmCsgC/0UNWhbnU"]
+[FEN "8/1k6/8/8/8/7P/8/K7 b - - 0 1"]
+[SetUp "1"]
+
+1... Kc7 2. h4 Kd7 3. h5 Ke7 4. h6 Kf7 5. h7 Kg7 6. h8=Q+ Kxh8 *
+
+[Event "The rook-pawn exception"]
+[Source "https://lichess.org/study/UsqmCsgC/wsFPHdWn"]
+[FEN "8/7k/8/8/6KP/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Kh5 Kg7 2. Kg5 Kh8 3. Kh6 Kg8 4. h5 Kh8 5. Kg6 Kg8 6. h6 Kh8 7. h7 *
+
+[Event "Avoid the knight-pawn stalemate"]
+[Source "https://lichess.org/study/UsqmCsgC/doUhj35f"]
+[FEN "6k1/8/6K1/6P1/8/8/8/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Kh6 Kh8 2. g6 Kg8 3. g7 Kf7 4. Kh7 *
+
+[Event "A pawn move can win opposition"]
+[Source "https://lichess.org/study/UsqmCsgC/3sBbyLsb"]
+[FEN "8/8/3k4/8/8/5K2/4P3/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Ke4 Ke6 2. e3 Kd6 3. Kf5 Ke7 4. Ke5 Kd7 5. Kf6 Ke8 6. Ke6 Kd8 7. e4 Ke8 8. e5 Kf8 9. Kd7 *
+
+[Event "Opposition from a distance"]
+[Source "https://lichess.org/study/UsqmCsgC/OecBqFxU"]
+[FEN "5k2/8/8/8/8/1P3K2/8/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Kf7 2. Ke3 Ke7 3. Kd3 Kd7 4. Kc3 Kc7 5. b4 Kb6 6. Kc4 Kc6 *
+
+[Event "The wrong bishop and rook pawn"]
+[Source "https://lichess.org/study/UsqmCsgC/5c1Rdkdk"]
+[FEN "7k/8/8/7P/5K2/8/2B5/8 w - - 0 1"]
+[SetUp "1"]
+
+1. Kg5 Kg7 2. Bd3 Kh8 3. Kh6 Kg8 4. Bc4+ Kh8 5. Kg5 Kg7 6. h6+ Kh7 7. Bd3+ Kh8 8. Kg6 Kg8 9. Bc4+ Kh8 10. h7 *
+
+[Event "Philidor: hold the sixth rank"]
+[Source "https://lichess.org/study/bnboDhFM/7LSvVgLj"]
+[FEN "4k3/7R/8/3KP3/8/8/r7/8 b - - 0 1"]
+[SetUp "1"]
+
+1... Ra6 2. e6 Ra1 3. Kd6 Rd1+ 4. Ke5 Re1+ 5. Kf6 Rf1+ 6. Kg6 Rg1+ 7. Kf6 Rf1+ 8. Ke5 Re1+ *
+
+[Event "Lucena: build the bridge"]
+[Source "https://lichess.org/study/bnboDhFM/31bASWi4"]
+[FEN "1K1k4/1P6/8/8/8/8/r7/2R5 w - - 1 1"]
+[SetUp "1"]
+
+1. Rd1+ Ke7 2. Rd4 Ke6 3. Kc7 Rc2+ 4. Kb6 Rb2+ 5. Kc6 Rc2+ 6. Kb5 Rb2+ 7. Rb4 Rxb4+ 8. Kxb4 Kd7 9. b8=Q *
+
+[Event "Connected passers: move as a unit"]
+[Source "https://lichess.org/study/bnboDhFM/K3D7TWQM"]
+[FEN "k7/8/6R1/7P/6P1/8/K7/7r w - - 0 1"]
+[SetUp "1"]
+
+1. h6 Kb7 2. g5 Kc7 3. Rg7+ Kd6 4. h7 Ke6 5. g6 Kf6 6. Rg8 *
+
+[Event "Rook behind the passed pawn"]
+[Source "https://lichess.org/study/bnboDhFM/fhx3V0Q2"]
+[FEN "R7/P4k2/8/8/8/8/5K2/r7 b - - 11 6"]
+[SetUp "1"]
+
+6... Kg7 7. Ke3 Kh7 8. Kd4 Kg7 9. Kc5 Kh7 10. Kb6 Rb1+ 11. Ka6 Ra1+ 12. Kb7 Rb1+ 13. Kc6 Ra1 14. Kb5 Kg7 15. Kb4 Kh7 16. Kb3 Kg7 17. Kb2 Ra6 18. Kb3 Kh7 19. Kb4 Kg7 20. Kb5 Ra1 21. Kb6 Rb1+ *
+
