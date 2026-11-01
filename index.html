@@ -1,14 +1,27 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#102b35"><meta name="description" content="Understand endgames, one idea at a time. Source-backed interactive lessons, engine practice, and personal review."><title>Endgame Lab · V2</title><link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxMDJiMzUiLz48cGF0aCBkPSJNMTkgNDdoMjZ2NUgxOXptMy00IDMtMTktNyA0IDMtMTMgOCA1IDMtMTMgMyAxMyA4LTUgMyAxMy03LTQgMyAxOXoiIGZpbGw9IiNhNGQ4ZDAiLz48L3N2Zz4K" type="image/svg+xml"><style>:root{--ink:#19333c;--muted:#697c80;--paper:#f5f7f5;--card:#fff;--line:#dfe7e4;--accent:#24665f;--soft:#e5f0eb;--blue:#9bbcc9;--light:#e6edf0;--dark:#85a9bb;--gold:#c69854;--danger:#a44236;--shadow:0 10px 40px #16343c08;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
-*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button,a,label.button{touch-action:manipulation}button{cursor:pointer}a{color:inherit}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c08b35;outline-offset:3px}h1,h2,h3,p{margin:0}h1{font-size:clamp(32px,4.2vw,53px);font-weight:650;line-height:1.12;letter-spacing:-1.9px}h2{font-size:25px;letter-spacing:-.6px;font-weight:650}h3{font-size:18px;font-weight:650;line-height:1.4}p{line-height:1.65}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:750;text-transform:uppercase;color:var(--accent);margin-bottom:14px}.header{height:86px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:28px;padding:0 max(24px,calc((100vw - 1250px)/2));background:#fbfcfa}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap;font-size:20px;font-weight:670;letter-spacing:-.7px}.brand small{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--accent);background:var(--soft);padding:4px 6px;border-radius:4px;margin-left:3px;vertical-align:middle}nav{display:flex;align-items:stretch;height:100%;gap:30px;margin:auto}nav a{display:flex;align-items:center;text-decoration:none;font-size:14px;color:var(--muted);position:relative}nav a.active{color:var(--ink);font-weight:650}nav a.active:after{content:'';height:3px;background:var(--accent);position:absolute;bottom:0;left:0;right:0}.icon-button{background:none;border:1px solid var(--line);width:36px;height:36px;display:inline-grid;place-items:center;border-radius:50%;font-size:19px;color:var(--ink)}main{max-width:1250px;margin:auto;padding:48px 24px 70px;min-height:calc(100vh - 170px)}.hero{display:grid;grid-template-columns:1fr 370px;gap:60px;align-items:center;margin-bottom:42px}.hero p{max-width:550px;margin-top:19px;color:var(--muted);font-size:16px}.hero .button-row{margin-top:25px}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:12px 18px;font-weight:650;font-size:13px;line-height:1.3;background:var(--accent);color:white;min-height:43px}.button:hover{filter:brightness(.96)}.button.secondary{background:var(--card);border-color:var(--line);color:var(--ink)}.button.ghost{background:transparent;border-color:var(--line);color:var(--ink)}.button.full{width:100%}.button.small{padding:8px 12px;min-height:35px}.button-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.text-button{border:0;background:none;color:var(--accent);font-size:13px;font-weight:650;padding:7px 0}.danger{color:var(--danger)}.feature-card{background:#102f38;border-radius:16px;padding:27px;color:white;position:relative;overflow:hidden}.feature-card:after{content:'♜';position:absolute;right:12px;bottom:6px;font-size:145px;line-height:1;color:#ffffff0a;pointer-events:none}.feature-card .eyebrow{color:#99cac2;font-size:10px}.feature-card h3{font-size:21px;max-width:240px}.feature-card p{font-size:13px;color:#b7cdd0;margin:12px 0 22px}.feature-card a{position:relative;z-index:1;color:#c1e8db;text-decoration:none;font-size:13px;font-weight:650}.mini-progress{height:4px;border-radius:9px;background:#ffffff24;margin-bottom:13px}.mini-progress i{display:block;background:#a1cdb9;height:100%;border-radius:9px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:30px 0 20px}.section-head p{font-size:13px;color:var(--muted);margin-top:5px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);border-radius:25px;padding:8px 14px;background:transparent;color:var(--muted);font-size:12px}.filter.active{background:var(--ink);border-color:var(--ink);color:white}.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.lesson-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:transform .18s,box-shadow .18s}.lesson-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.lesson-symbol{width:43px;height:43px;background:var(--soft);border-radius:11px;display:grid;place-items:center;font-size:28px;color:var(--accent)}.badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:4px;background:#f1f4f1;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.3px}.badge.complete{background:#e4f1e7;color:#2d6a43}.card-index{color:#8b999a;font-size:11px;letter-spacing:1px;margin-bottom:7px}.lesson-card p{font-size:13px;color:var(--muted);margin:10px 0 24px;flex:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;font-size:11px;color:var(--muted);gap:6px}.card-bottom a{font-size:12px;color:var(--accent);font-weight:700;text-decoration:none}.callout{background:#eaf0ed;border-radius:12px;padding:22px 26px;margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}.callout p{font-size:13px;color:var(--muted);margin-top:4px}.callout h3{font-size:16px}.page-title{margin-bottom:30px}.page-title p{margin-top:12px;color:var(--muted);max-width:650px}.practice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.practice-card{padding:23px;background:white;border:1px solid var(--line);border-radius:12px;display:flex;gap:20px;align-items:center}.practice-card>div{flex:1}.practice-card p{font-size:12px;color:var(--muted);margin:7px 0 12px}.practice-card .lesson-symbol{flex:none}.breadcrumb{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:9px;margin-bottom:23px}.breadcrumb a{text-decoration:none}.session-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:15px}.session-heading h1{font-size:31px;letter-spacing:-.9px}.session-heading p{font-size:12px;margin-top:6px;color:var(--muted)}.session-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);gap:32px;align-items:start}.board-wrap{max-width:610px;margin:auto;width:100%}.player-bar{display:flex;align-items:center;justify-content:space-between;font-size:12px;padding:0 2px 12px;color:var(--muted);min-height:30px}.player-bar.bottom{padding:12px 2px 0}.player-tag{display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:650}.color-dot{width:11px;height:11px;border-radius:50%;background:#fff;border:1px solid #a1afb1;display:inline-block}.color-dot.black{background:#243a42;border-color:#243a42}.board{aspect-ratio:1;width:100%;display:grid;grid-template-columns:repeat(8,1fr);border-radius:4px;overflow:hidden;box-shadow:0 5px 20px #18364114;position:relative}.square{appearance:none;border:0;border-radius:0;padding:0;position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--light);cursor:pointer;color:var(--ink)}.square.dark{background:var(--dark)}.square img{width:89%;height:89%;position:relative;z-index:2;filter:drop-shadow(0 2px 1px #21364220);pointer-events:none}.square.selected{background:#d6c77e}.square.last:after{content:'';position:absolute;inset:0;background:#e9db7190}.square.hint:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 5px #24665f;z-index:3}.square.check{background:#d38f88}.square.legal:before{content:'';width:25%;height:25%;border-radius:50%;background:#173a4d36;position:absolute;z-index:4}.square.legal.occupied:before{width:87%;height:87%;background:none;border:5px solid #173a4d40}.coord{position:absolute;font-size:10px;font-weight:700;z-index:5;pointer-events:none;line-height:1}.coord.rank{top:4px;left:4px}.coord.file{bottom:3px;right:4px}.square.dark .coord{color:#f4f8f9}.board-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}.board-tools .button-row{gap:7px}.board-tools button{font-size:12px}.engine-status{font-size:10px;color:var(--muted);display:flex;gap:6px;align-items:center}.engine-status:before{content:'';width:5px;height:5px;border-radius:50%;background:#60a47b}.lesson-panel{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.tabs{display:flex;border-bottom:1px solid var(--line)}.tab{flex:1;padding:16px 10px;border:none;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:12px;font-weight:650}.tab.active{color:var(--accent);border-bottom-color:var(--accent);background:#f7faf8}.panel-content{padding:26px}.panel-content h2{font-size:23px;line-height:1.3}.panel-content>p{font-size:14px;margin-top:15px;color:#52696f}.idea{margin-top:24px;padding:18px;background:var(--soft);border-radius:8px}.idea h3{font-size:12px;letter-spacing:.7px;text-transform:uppercase;color:var(--accent);margin-bottom:7px}.idea p{font-size:13px;line-height:1.7}.steps{padding-left:20px;margin:18px 0 24px;font-size:13px;line-height:1.7;color:#52696f}.steps li+li{margin-top:10px}.warning{border-left:3px solid var(--gold);padding:2px 0 2px 13px;margin:22px 0;font-size:12px;line-height:1.7;color:#6c6556}.source-link{margin-top:22px;font-size:11px;color:var(--muted);line-height:1.65}.source-link a{color:var(--accent)}.demo-step{font-size:11px;color:var(--muted);margin-bottom:12px;display:flex;justify-content:space-between}.demo-san{font-size:28px;font-weight:650;margin-bottom:12px}.demo-note{font-size:14px;line-height:1.8;min-height:100px}.move-list{display:flex;gap:5px;flex-wrap:wrap;padding:14px 0;max-height:150px;overflow:auto;margin:10px 0}.move-chip{background:#f0f4f2;border:0;color:var(--muted);border-radius:4px;padding:6px 8px;font-size:12px}.move-chip.active{background:var(--ink);color:white}.feedback{padding:17px;background:#f2f6f4;border-radius:8px;margin-top:20px;font-size:13px;line-height:1.7}.feedback.good{background:#eaf4eb;color:#316341}.feedback.bad{background:#fcf0e8;color:#8d4c2e}.feedback h3{font-size:14px;margin-bottom:6px}.goal-line{margin:18px 0;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted)}.goal-line strong{color:var(--ink)}.outcome-label{display:inline-block;font-size:11px;letter-spacing:.2px;border:1px solid var(--line);border-radius:5px;padding:6px 9px}.result{background:#eff7ee;border:1px solid #d5e7d3;border-radius:9px;padding:20px;margin-top:20px}.result h3{margin-bottom:10px}.result p{font-size:13px;margin-bottom:18px}.result.failed{background:#fbf1eb;border-color:#efdfd5}.practice-options{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);margin:18px 0}.practice-options select{border:1px solid var(--line);background:white;border-radius:5px;padding:6px;font-size:12px}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:24px}.stat strong{font-size:33px;font-weight:600;letter-spacing:-1px;display:block;margin-bottom:8px}.stat span{font-size:12px;color:var(--muted)}.progress-row{display:flex;gap:20px;align-items:center;background:white;padding:19px 22px;border:1px solid var(--line);border-radius:8px;margin-bottom:10px}.progress-row>div{flex:1}.progress-row h3{font-size:14px}.progress-row p{font-size:11px;color:var(--muted);margin-top:5px}.progress-track{height:5px;background:#e6ede9;border-radius:9px;overflow:hidden;margin-top:10px;max-width:350px}.progress-track i{display:block;background:var(--accent);height:100%}.source-card{background:white;border:1px solid var(--line);padding:24px;border-radius:10px;margin-bottom:15px;font-size:13px;line-height:1.8}.source-card h2{font-size:20px;margin-bottom:12px}.source-card p+p{margin-top:13px}.source-card a{color:var(--accent)}.source-table{width:100%;border-collapse:collapse;font-size:12px}.source-table td,.source-table th{text-align:left;vertical-align:top;padding:13px 9px;border-bottom:1px solid var(--line)}.source-table th{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}.empty{padding:40px;background:white;border:1px dashed var(--line);border-radius:12px;text-align:center}.empty p{margin:10px 0 20px;color:var(--muted);font-size:14px}dialog{border:1px solid var(--line);border-radius:16px;padding:28px;max-width:480px;width:calc(100% - 32px);color:var(--ink);box-shadow:0 20px 80px #102b3540}dialog::backdrop{background:#102b3570;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.setting{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}.setting input{accent-color:var(--accent);width:18px;height:18px}dialog p{font-size:13px;margin:20px 0}.promotion-options{display:flex;gap:10px;margin-top:20px}.promotion-options button{flex:1;background:var(--light);border:1px solid var(--line);border-radius:8px;aspect-ratio:1}.promotion-options img{width:100%}footer{max-width:1202px;margin:auto;border-top:1px solid var(--line);padding:25px 0 30px;display:flex;justify-content:space-between;font-size:10px;color:var(--muted);gap:15px}footer a{text-decoration:none}.skip{position:absolute;top:-60px;left:20px;z-index:20;background:white;padding:15px}.skip:focus{top:10px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 20px;border-radius:8px;font-size:13px;z-index:30;max-width:90vw;display:none}.loading-page{text-align:center;padding:80px;color:var(--muted)}.board-caption{text-align:center;font-size:11px;color:var(--muted);margin-top:14px}.inline-link{font-size:12px;color:var(--accent)}.read-progress{font-size:11px;color:var(--muted);margin-top:12px}.session-subtle{display:flex;gap:10px;align-items:center}.session-subtle .badge{font-size:11px}.mobile-only{display:none}@media(min-width:1500px){main{padding-top:60px}.hero{margin-bottom:55px}}@media(max-width:900px){.hero{grid-template-columns:1fr 300px;gap:30px}.lesson-grid{grid-template-columns:repeat(2,1fr)}.session-grid{gap:22px;grid-template-columns:minmax(0,1fr) minmax(280px,.85fr)}.panel-content{padding:21px}.stat{padding:20px}footer{margin:0 24px}.session-heading h1{font-size:27px}}@media(max-width:680px){.header{height:69px;padding:0 17px;gap:14px;flex-wrap:wrap}.brand{font-size:16px;gap:7px}.brand img{width:29px;height:29px}.brand small{font-size:8px;padding:3px}.header nav{gap:15px;margin:0 0 0 auto}.header nav a{font-size:12px}.header>.icon-button{width:29px;height:29px;font-size:17px}.hero{grid-template-columns:1fr;gap:25px;margin-bottom:30px}.hero h1{max-width:400px;font-size:38px}.hero p{font-size:14px;margin-top:15px}.feature-card{padding:22px}.feature-card h3{max-width:none;font-size:19px}.feature-card p{margin:8px 0 15px}.hero .button-row{margin-top:21px}main{padding:30px 17px 45px}.section-head{margin-top:25px;align-items:start}.section-head h2{font-size:22px}.section-head p{font-size:12px}.section-head>.muted{font-size:11px;white-space:nowrap}.lesson-grid{gap:12px}.lesson-card{padding:16px}.card-top{margin-bottom:17px}.lesson-symbol{width:35px;height:35px;font-size:24px}.lesson-card h3{font-size:15px}.lesson-card p{font-size:12px;margin:9px 0 17px;line-height:1.6}.card-bottom{font-size:10px;flex-wrap:wrap;gap:9px}.card-index{font-size:9px;letter-spacing:.5px}.badge{font-size:9px}.callout{padding:20px;display:block}.callout .button{margin-top:16px}.session-grid{grid-template-columns:1fr;gap:22px}.session-heading{align-items:start;margin-bottom:20px}.session-heading h1{font-size:25px}.session-heading>.badge{max-width:100px;text-align:center}.breadcrumb{margin-bottom:17px}.session-subtle{flex-wrap:wrap}.board-wrap{max-width:540px}.board-tools{margin-top:16px}.board-tools .button{padding:9px 10px;font-size:11px}.engine-status{font-size:9px}.panel-content{padding:24px}.demo-note{min-height:60px}.practice-grid{grid-template-columns:1fr}.practice-card{padding:19px;gap:14px}.stat-grid{grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:20px}.stat strong{font-size:30px}.progress-row{padding:16px;gap:12px}.source-table td,.source-table th{padding:10px 5px;font-size:11px}.source-card{padding:18px}.source-card .source-scroll{overflow-x:auto}footer{margin:0 17px;flex-wrap:wrap;line-height:1.7;padding:20px 0;gap:10px}footer span:last-child{display:none}.filters{gap:6px}.filter{font-size:11px;padding:8px 11px}.page-title h1{font-size:34px}.page-title p{font-size:14px}.coord{font-size:9px}.board-caption{font-size:10px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+*{box-sizing:border-box}body{margin:0}button,input,select{font:inherit}button,a,input,select{-webkit-tap-highlight-color:transparent}button,a,label.button{touch-action:manipulation}button{cursor:pointer}a{color:inherit}button:disabled{cursor:default;opacity:.45}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #c08b35;outline-offset:3px}h1,h2,h3,p{margin:0}h1{font-size:clamp(32px,4.2vw,53px);font-weight:650;line-height:1.12;letter-spacing:-1.9px}h2{font-size:25px;letter-spacing:-.6px;font-weight:650}h3{font-size:18px;font-weight:650;line-height:1.4}p{line-height:1.65}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:750;text-transform:uppercase;color:var(--accent);margin-bottom:14px}.header{height:86px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:28px;padding:0 max(24px,calc((100vw - 1250px)/2));background:#fbfcfa}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;white-space:nowrap;font-size:20px;font-weight:670;letter-spacing:-.7px}.brand small{font-size:10px;font-weight:700;letter-spacing:.5px;color:var(--accent);background:var(--soft);padding:4px 6px;border-radius:4px;margin-left:3px;vertical-align:middle}nav{display:flex;align-items:stretch;height:100%;gap:30px;margin:auto}nav a{display:flex;align-items:center;text-decoration:none;font-size:14px;color:var(--muted);position:relative}nav a.active{color:var(--ink);font-weight:650}nav a.active:after{content:'';height:3px;background:var(--accent);position:absolute;bottom:0;left:0;right:0}.icon-button{background:none;border:1px solid var(--line);width:36px;height:36px;display:inline-grid;place-items:center;border-radius:50%;font-size:19px;color:var(--ink)}main{max-width:1250px;margin:auto;padding:48px 24px 70px;min-height:calc(100vh - 170px)}.hero{display:grid;grid-template-columns:1fr 370px;gap:60px;align-items:center;margin-bottom:42px}.hero p{max-width:550px;margin-top:19px;color:var(--muted);font-size:16px}.hero .button-row{margin-top:25px}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;border:1px solid transparent;border-radius:8px;padding:12px 18px;font-weight:650;font-size:13px;line-height:1.3;background:var(--accent);color:white;min-height:43px}.button:hover{filter:brightness(.96)}.button.secondary{background:var(--card);border-color:var(--line);color:var(--ink)}.button.ghost{background:transparent;border-color:var(--line);color:var(--ink)}.button.full{width:100%}.button.small{padding:8px 12px;min-height:35px}.button-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.text-button{border:0;background:none;color:var(--accent);font-size:13px;font-weight:650;padding:7px 0}.danger{color:var(--danger)}.feature-card{background:#102f38;border-radius:16px;padding:27px;color:white;position:relative;overflow:hidden}.feature-card:after{content:'';position:absolute;right:12px;bottom:6px;font-size:145px;line-height:1;color:#ffffff0a;pointer-events:none}.feature-card .eyebrow{color:#99cac2;font-size:10px}.feature-card h3{font-size:21px;max-width:240px}.feature-card p{font-size:13px;color:#b7cdd0;margin:12px 0 22px}.feature-card a{position:relative;z-index:1;color:#c1e8db;text-decoration:none;font-size:13px;font-weight:650}.mini-progress{height:4px;border-radius:9px;background:#ffffff24;margin-bottom:13px}.mini-progress i{display:block;background:#a1cdb9;height:100%;border-radius:9px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:30px 0 20px}.section-head p{font-size:13px;color:var(--muted);margin-top:5px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.filter{border:1px solid var(--line);border-radius:25px;padding:8px 14px;background:transparent;color:var(--muted);font-size:12px}.filter.active{background:var(--ink);border-color:var(--ink);color:white}.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.lesson-card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;transition:transform .18s,box-shadow .18s}.lesson-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.lesson-symbol{width:43px;height:43px;background:var(--soft);border-radius:11px;display:grid;place-items:center;font-size:28px;color:var(--accent)}.badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:4px;background:#f1f4f1;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.3px}.badge.complete{background:#e4f1e7;color:#2d6a43}.card-index{color:#8b999a;font-size:11px;letter-spacing:1px;margin-bottom:7px}.lesson-card p{font-size:13px;color:var(--muted);margin:10px 0 24px;flex:1}.card-bottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;font-size:11px;color:var(--muted);gap:6px}.card-bottom a{font-size:12px;color:var(--accent);font-weight:700;text-decoration:none}.callout{background:#eaf0ed;border-radius:12px;padding:22px 26px;margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}.callout p{font-size:13px;color:var(--muted);margin-top:4px}.callout h3{font-size:16px}.page-title{margin-bottom:30px}.page-title p{margin-top:12px;color:var(--muted);max-width:650px}.practice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.practice-card{padding:23px;background:white;border:1px solid var(--line);border-radius:12px;display:flex;gap:20px;align-items:center}.practice-card>div{flex:1}.practice-card p{font-size:12px;color:var(--muted);margin:7px 0 12px}.practice-card .lesson-symbol{flex:none}.breadcrumb{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:9px;margin-bottom:23px}.breadcrumb a{text-decoration:none}.session-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:15px}.session-heading h1{font-size:31px;letter-spacing:-.9px}.session-heading p{font-size:12px;margin-top:6px;color:var(--muted)}.session-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(310px,.85fr);gap:32px;align-items:start}.board-wrap{max-width:610px;margin:auto;width:100%}.player-bar{display:flex;align-items:center;justify-content:space-between;font-size:12px;padding:0 2px 12px;color:var(--muted);min-height:30px}.player-bar.bottom{padding:12px 2px 0}.player-tag{display:flex;align-items:center;gap:8px;color:var(--ink);font-weight:650}.color-dot{width:11px;height:11px;border-radius:50%;background:#fff;border:1px solid #a1afb1;display:inline-block}.color-dot.black{background:#243a42;border-color:#243a42}.board{aspect-ratio:1;width:100%;display:grid;grid-template-columns:repeat(8,1fr);border-radius:4px;overflow:hidden;box-shadow:0 5px 20px #18364114;position:relative}.square{appearance:none;border:0;border-radius:0;padding:0;position:relative;aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--light);cursor:pointer;color:var(--ink)}.square.dark{background:var(--dark)}.square img{width:89%;height:89%;position:relative;z-index:2;filter:drop-shadow(0 2px 1px #21364220);pointer-events:none}.square.selected{background:#d6c77e}.square.last:after{content:'';position:absolute;inset:0;background:#e9db7190}.square.hint:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 5px #24665f;z-index:3}.square.check{background:#d38f88}.square.legal:before{content:'';width:25%;height:25%;border-radius:50%;background:#173a4d36;position:absolute;z-index:4}.square.legal.occupied:before{width:87%;height:87%;background:none;border:5px solid #173a4d40}.coord{position:absolute;font-size:10px;font-weight:700;z-index:5;pointer-events:none;line-height:1}.coord.rank{top:4px;left:4px}.coord.file{bottom:3px;right:4px}.square.dark .coord{color:#f4f8f9}.board-tools{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:18px}.board-tools .button-row{gap:7px}.board-tools button{font-size:12px}.engine-status{font-size:10px;color:var(--muted);display:flex;gap:6px;align-items:center}.engine-status:before{content:'';width:5px;height:5px;border-radius:50%;background:#60a47b}.lesson-panel{background:white;border:1px solid var(--line);border-radius:12px;overflow:hidden}.tabs{display:flex;border-bottom:1px solid var(--line)}.tab{flex:1;padding:16px 10px;border:none;border-bottom:2px solid transparent;background:transparent;color:var(--muted);font-size:12px;font-weight:650}.tab.active{color:var(--accent);border-bottom-color:var(--accent);background:#f7faf8}.panel-content{padding:26px}.panel-content h2{font-size:23px;line-height:1.3}.panel-content>p{font-size:14px;margin-top:15px;color:#52696f}.idea{margin-top:24px;padding:18px;background:var(--soft);border-radius:8px}.idea h3{font-size:12px;letter-spacing:.7px;text-transform:uppercase;color:var(--accent);margin-bottom:7px}.idea p{font-size:13px;line-height:1.7}.steps{padding-left:20px;margin:18px 0 24px;font-size:13px;line-height:1.7;color:#52696f}.steps li+li{margin-top:10px}.warning{border-left:3px solid var(--gold);padding:2px 0 2px 13px;margin:22px 0;font-size:12px;line-height:1.7;color:#6c6556}.source-link{margin-top:22px;font-size:11px;color:var(--muted);line-height:1.65}.source-link a{color:var(--accent)}.demo-step{font-size:11px;color:var(--muted);margin-bottom:12px;display:flex;justify-content:space-between}.demo-san{font-size:28px;font-weight:650;margin-bottom:12px}.demo-note{font-size:14px;line-height:1.8;min-height:100px}.move-list{display:flex;gap:5px;flex-wrap:wrap;padding:14px 0;max-height:150px;overflow:auto;margin:10px 0}.move-chip{background:#f0f4f2;border:0;color:var(--muted);border-radius:4px;padding:6px 8px;font-size:12px}.move-chip.active{background:var(--ink);color:white}.feedback{padding:17px;background:#f2f6f4;border-radius:8px;margin-top:20px;font-size:13px;line-height:1.7}.feedback.good{background:#eaf4eb;color:#316341}.feedback.bad{background:#fcf0e8;color:#8d4c2e}.feedback h3{font-size:14px;margin-bottom:6px}.goal-line{margin:18px 0;display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted)}.goal-line strong{color:var(--ink)}.outcome-label{display:inline-block;font-size:11px;letter-spacing:.2px;border:1px solid var(--line);border-radius:5px;padding:6px 9px}.result{background:#eff7ee;border:1px solid #d5e7d3;border-radius:9px;padding:20px;margin-top:20px}.result h3{margin-bottom:10px}.result p{font-size:13px;margin-bottom:18px}.result.failed{background:#fbf1eb;border-color:#efdfd5}.practice-options{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--muted);margin:18px 0}.practice-options select{border:1px solid var(--line);background:white;border-radius:5px;padding:6px;font-size:12px}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:30px 0}.stat{background:white;border:1px solid var(--line);border-radius:12px;padding:24px}.stat strong{font-size:33px;font-weight:600;letter-spacing:-1px;display:block;margin-bottom:8px}.stat span{font-size:12px;color:var(--muted)}.progress-row{display:flex;gap:20px;align-items:center;background:white;padding:19px 22px;border:1px solid var(--line);border-radius:8px;margin-bottom:10px}.progress-row>div{flex:1}.progress-row h3{font-size:14px}.progress-row p{font-size:11px;color:var(--muted);margin-top:5px}.progress-track{height:5px;background:#e6ede9;border-radius:9px;overflow:hidden;margin-top:10px;max-width:350px}.progress-track i{display:block;background:var(--accent);height:100%}.source-card{background:white;border:1px solid var(--line);padding:24px;border-radius:10px;margin-bottom:15px;font-size:13px;line-height:1.8}.source-card h2{font-size:20px;margin-bottom:12px}.source-card p+p{margin-top:13px}.source-card a{color:var(--accent)}.source-table{width:100%;border-collapse:collapse;font-size:12px}.source-table td,.source-table th{text-align:left;vertical-align:top;padding:13px 9px;border-bottom:1px solid var(--line)}.source-table th{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted)}.empty{padding:40px;background:white;border:1px dashed var(--line);border-radius:12px;text-align:center}.empty p{margin:10px 0 20px;color:var(--muted);font-size:14px}dialog{border:1px solid var(--line);border-radius:16px;padding:28px;max-width:480px;width:calc(100% - 32px);color:var(--ink);box-shadow:0 20px 80px #102b3540}dialog::backdrop{background:#102b3570;backdrop-filter:blur(3px)}.dialog-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.setting{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px}.setting input{accent-color:var(--accent);width:18px;height:18px}dialog p{font-size:13px;margin:20px 0}.promotion-options{display:flex;gap:10px;margin-top:20px}.promotion-options button{flex:1;background:var(--light);border:1px solid var(--line);border-radius:8px;aspect-ratio:1}.promotion-options img{width:100%}footer{max-width:1202px;margin:auto;border-top:1px solid var(--line);padding:25px 0 30px;display:flex;justify-content:space-between;font-size:10px;color:var(--muted);gap:15px}footer a{text-decoration:none}.skip{position:absolute;top:-60px;left:20px;z-index:20;background:white;padding:15px}.skip:focus{top:10px}#toast{position:fixed;bottom:25px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;padding:12px 20px;border-radius:8px;font-size:13px;z-index:30;max-width:90vw;display:none}.loading-page{text-align:center;padding:80px;color:var(--muted)}.board-caption{text-align:center;font-size:11px;color:var(--muted);margin-top:14px}.inline-link{font-size:12px;color:var(--accent)}.read-progress{font-size:11px;color:var(--muted);margin-top:12px}.session-subtle{display:flex;gap:10px;align-items:center}.session-subtle .badge{font-size:11px}.mobile-only{display:none}@media(min-width:1500px){main{padding-top:60px}.hero{margin-bottom:55px}}@media(max-width:900px){.hero{grid-template-columns:1fr 300px;gap:30px}.lesson-grid{grid-template-columns:repeat(2,1fr)}.session-grid{gap:22px;grid-template-columns:minmax(0,1fr) minmax(280px,.85fr)}.panel-content{padding:21px}.stat{padding:20px}footer{margin:0 24px}.session-heading h1{font-size:27px}}@media(max-width:680px){.header{height:69px;padding:0 17px;gap:14px;flex-wrap:wrap}.brand{font-size:16px;gap:7px}.brand img{width:29px;height:29px}.brand small{font-size:8px;padding:3px}.header nav{gap:15px;margin:0 0 0 auto}.header nav a{font-size:12px}.header>.icon-button{width:29px;height:29px;font-size:17px}.hero{grid-template-columns:1fr;gap:25px;margin-bottom:30px}.hero h1{max-width:400px;font-size:38px}.hero p{font-size:14px;margin-top:15px}.feature-card{padding:22px}.feature-card h3{max-width:none;font-size:19px}.feature-card p{margin:8px 0 15px}.hero .button-row{margin-top:21px}main{padding:30px 17px 45px}.section-head{margin-top:25px;align-items:start}.section-head h2{font-size:22px}.section-head p{font-size:12px}.section-head>.muted{font-size:11px;white-space:nowrap}.lesson-grid{gap:12px}.lesson-card{padding:16px}.card-top{margin-bottom:17px}.lesson-symbol{width:35px;height:35px;font-size:24px}.lesson-card h3{font-size:15px}.lesson-card p{font-size:12px;margin:9px 0 17px;line-height:1.6}.card-bottom{font-size:10px;flex-wrap:wrap;gap:9px}.card-index{font-size:9px;letter-spacing:.5px}.badge{font-size:9px}.callout{padding:20px;display:block}.callout .button{margin-top:16px}.session-grid{grid-template-columns:1fr;gap:22px}.session-heading{align-items:start;margin-bottom:20px}.session-heading h1{font-size:25px}.session-heading>.badge{max-width:100px;text-align:center}.breadcrumb{margin-bottom:17px}.session-subtle{flex-wrap:wrap}.board-wrap{max-width:540px}.board-tools{margin-top:16px}.board-tools .button{padding:9px 10px;font-size:11px}.engine-status{font-size:9px}.panel-content{padding:24px}.demo-note{min-height:60px}.practice-grid{grid-template-columns:1fr}.practice-card{padding:19px;gap:14px}.stat-grid{grid-template-columns:repeat(2,1fr);gap:12px}.stat{padding:20px}.stat strong{font-size:30px}.progress-row{padding:16px;gap:12px}.source-table td,.source-table th{padding:10px 5px;font-size:11px}.source-card{padding:18px}.source-card .source-scroll{overflow-x:auto}footer{margin:0 17px;flex-wrap:wrap;line-height:1.7;padding:20px 0;gap:10px}footer span:last-child{display:none}.filters{gap:6px}.filter{font-size:11px;padding:8px 11px}.page-title h1{font-size:34px}.page-title p{font-size:14px}.coord{font-size:9px}.board-caption{font-size:10px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 @media(max-width:680px){.header{gap:8px;flex-wrap:nowrap}.brand{font-size:15px;gap:6px}.brand img{width:26px;height:26px}.brand small{display:none}.header nav{gap:12px}.header nav a{font-size:11px}.header>.icon-button{width:26px;height:26px;font-size:16px;flex-shrink:0}}
 @media(max-width:350px){.header{display:grid;grid-template-columns:1fr auto;height:auto;padding-top:12px;gap:0}.header nav{grid-column:1/-1;grid-row:2;justify-content:center;gap:35px;height:42px;margin:4px 0 0}.header>.icon-button{grid-column:2;grid-row:1}}
 #mobile-session-controls{display:none}@media(max-width:680px){#mobile-session-controls.mobile-session-controls{display:block;position:fixed;bottom:0;left:0;right:0;z-index:10;background:#fbfdfbf7;backdrop-filter:blur(14px);border-top:1px solid #cfddd5;box-shadow:0 -5px 25px #19333c09;padding:12px 17px max(12px,env(safe-area-inset-bottom))}.mobile-session-controls p{font-size:12px;line-height:1.55;max-height:76px;overflow:auto;margin-bottom:10px}.mobile-session-controls .button-row{justify-content:space-between}.mobile-session-controls .muted{font-size:10px}.mobile-session-controls .button{min-height:36px}.session-grid{padding-bottom:140px}.session-grid:has([aria-selected="true"][data-tab="learn"]){padding-bottom:0}}
 .course-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.course-card{display:block;text-decoration:none;background:white;border:1px solid var(--line);border-radius:14px;padding:30px;transition:transform .15s,box-shadow .15s}.course-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.course-card-top{display:flex;gap:15px;align-items:center;margin-bottom:24px}.course-card-top .eyebrow{margin:0}.course-card h2{margin-bottom:12px}.course-card>p{font-size:14px;color:var(--muted);min-height:48px}.course-card .progress-track{margin:24px 0 18px;max-width:none}.course-card .card-bottom{font-size:12px}.course-card .card-bottom strong{color:var(--accent);font-size:12px}.practice-toolbar{display:flex;align-items:flex-end;gap:14px;margin-bottom:22px;flex-wrap:wrap}.practice-toolbar label{display:grid;gap:7px;font-size:11px;color:var(--muted);flex:1;min-width:180px}.practice-toolbar select{width:100%;max-width:100%;padding:12px;background:white;border:1px solid var(--line);border-radius:7px;color:var(--ink);font-size:13px}.lesson-end-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}.lesson-end-actions .button{flex:1;white-space:normal;min-width:150px}.limits{font-size:12px;color:var(--muted);line-height:1.7;border-top:1px solid var(--line);padding-top:18px;margin-top:20px}.limits h3{font-size:13px;color:var(--ink);margin-bottom:7px}.result-detail{font-size:12px!important}.release-badge{white-space:nowrap}.mobile-session-controls .button-row{gap:7px}.mobile-session-controls .button{padding:8px 10px}.practice-card .badge{white-space:normal}.session-heading h1{overflow-wrap:anywhere}
 @media(max-width:680px){.course-grid{grid-template-columns:1fr;gap:16px}.course-card{padding:24px}.course-card h2{font-size:24px}.course-card>p{min-height:0}.hero h1{font-size:35px}.practice-toolbar{gap:12px}.practice-toolbar label{min-width:calc(50% - 12px);flex-basis:calc(50% - 12px)}.practice-toolbar>.button{width:100%}.practice-toolbar select{font-size:12px;padding:10px}.release-badge{display:none}.mobile-session-controls .muted{display:none}.mobile-session-controls .button-row{justify-content:space-between}.lesson-end-actions{display:grid}.lesson-end-actions .button{width:100%}.progress-row{align-items:flex-start}.progress-row>.lesson-symbol{display:none}.progress-row .button{flex-shrink:0}}
+
+/* Lesson art shares the board SVGs; no platform-dependent chess glyphs. */
+.lesson-symbol{display:inline-flex;align-items:center;justify-content:center;gap:0;flex-shrink:0;width:52px;height:48px;background:var(--light);border-radius:9px}
+.lesson-symbol img{display:block;width:34px;height:38px;object-fit:contain}
+.lesson-symbol:has(img+img){width:64px}
+.lesson-symbol:has(img+img) img{width:29px}
+.lesson-navigation{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.lesson-navigation p{width:100%;font-size:12px;color:var(--muted)}
+.coaching-details{margin-top:14px;border:1px solid var(--line);border-radius:8px;padding:13px 15px;font-size:13px;line-height:1.7}
+.coaching-details summary{cursor:pointer;color:var(--accent);font-weight:650}
+.coaching-details h3{font-size:12px;margin:15px 0 4px;color:var(--muted)}
+.coaching-details p{font-size:13px}
+@media(max-width:680px){.lesson-symbol{width:42px;height:42px}.lesson-symbol img{width:30px;height:34px}.lesson-symbol:has(img+img){width:53px}.lesson-symbol:has(img+img) img{width:25px}.lesson-navigation{margin-top:30px}.lesson-navigation .button{width:100%}.mobile-session-controls .text-button{font-size:11px;min-height:36px}.mobile-session-controls p{max-height:110px}.session-grid{padding-bottom:180px}}
 </style></head>
 <body><a class="skip" href="#main">Skip to content</a>
-<header class="header"><a class="brand" href="#learn"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxMDJiMzUiLz48cGF0aCBkPSJNMTkgNDdoMjZ2NUgxOXptMy00IDMtMTktNyA0IDMtMTMgOCA1IDMtMTMgMyAxMyA4LTUgMyAxMy03LTQgMyAxOXoiIGZpbGw9IiNhNGQ4ZDAiLz48L3N2Zz4K" alt="" width="37" height="37"><span>Endgame Lab <small>V2.1</small></span></a><nav aria-label="Main navigation"><a href="#learn" data-nav="learn">Learn</a><a href="#practice" data-nav="practice">Practice</a><a href="#progress" data-nav="progress">Review</a></nav><button class="icon-button" id="settings-open" aria-label="Settings">⚙</button></header>
+<header class="header"><a class="brand" href="#learn"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTYiIGZpbGw9IiMxMDJiMzUiLz48cGF0aCBkPSJNMTkgNDdoMjZ2NUgxOXptMy00IDMtMTktNyA0IDMtMTMgOCA1IDMtMTMgMyAxMyA4LTUgMyAxMy03LTQgMyAxOXoiIGZpbGw9IiNhNGQ4ZDAiLz48L3N2Zz4K" alt="" width="37" height="37"><span>Endgame Lab <small>V2.2</small></span></a><nav aria-label="Main navigation"><a href="#learn" data-nav="learn">Learn</a><a href="#practice" data-nav="practice">Practice</a><a href="#progress" data-nav="progress">Review</a></nav><button class="icon-button" id="settings-open" aria-label="Settings">⚙</button></header>
 <main id="main" tabindex="-1"><div class="loading-page">Setting up your board…</div></main>
 <footer><span>Small positions. Lasting understanding.</span><a href="#sources">Sources & methodology</a><span>Free · No account required</span></footer>
 <dialog id="settings"><form method="dialog"><div class="dialog-head"><h2>Your workspace</h2><button class="icon-button" aria-label="Close settings">×</button></div></form><label class="setting">Move sounds <input type="checkbox" id="sound-setting"></label><label class="setting">Show legal moves <input type="checkbox" id="legal-setting" checked></label><p class="muted">Progress stays in this browser. Export a backup to move it to another device.</p><div class="button-row"><button class="button secondary" id="export-progress">Export progress</button><label class="button secondary">Import backup<input type="file" id="import-progress" accept="application/json" hidden></label></div><p id="settings-message" role="status"></p><button class="text-button danger" id="reset-progress">Reset progress…</button></dialog>
@@ -2616,7 +2629,7 @@ var Chess = class {
     return !this.isCheck() && this._moves().length === 0;
   }
   isInsufficientMaterial() {
-    const pieces = {
+    const pieces2 = {
       b: 0,
       n: 0,
       r: 0,
@@ -2635,7 +2648,7 @@ var Chess = class {
       }
       const piece = this._board[i];
       if (piece) {
-        pieces[piece.type] = piece.type in pieces ? pieces[piece.type] + 1 : 1;
+        pieces2[piece.type] = piece.type in pieces2 ? pieces2[piece.type] + 1 : 1;
         if (piece.type === BISHOP) {
           bishops.push(squareColor);
         }
@@ -2646,10 +2659,10 @@ var Chess = class {
       return true;
     } else if (
       // k vs. kn .... or .... k vs. kb
-      numPieces === 3 && (pieces[BISHOP] === 1 || pieces[KNIGHT] === 1)
+      numPieces === 3 && (pieces2[BISHOP] === 1 || pieces2[KNIGHT] === 1)
     ) {
       return true;
-    } else if (numPieces === pieces[BISHOP] + 2) {
+    } else if (numPieces === pieces2[BISHOP] + 2) {
       let sum = 0;
       const len = bishops.length;
       for (let i = 0; i < len; i++) {
@@ -3101,13 +3114,13 @@ var Chess = class {
     return this._header;
   }
   // TODO: value validation per spec
-  setHeader(key, value) {
-    this._header[key] = value ?? SEVEN_TAG_ROSTER[key] ?? null;
+  setHeader(key2, value) {
+    this._header[key2] = value ?? SEVEN_TAG_ROSTER[key2] ?? null;
     return this.getHeaders();
   }
-  removeHeader(key) {
-    if (key in this._header) {
-      this._header[key] = SEVEN_TAG_ROSTER[key] || null;
+  removeHeader(key2) {
+    if (key2 in this._header) {
+      this._header[key2] = SEVEN_TAG_ROSTER[key2] || null;
       return true;
     }
     return false;
@@ -3115,9 +3128,9 @@ var Chess = class {
   // return only non-null headers (omit placemarker nulls)
   getHeaders() {
     const nonNullHeaders = {};
-    for (const [key, value] of Object.entries(this._header)) {
+    for (const [key2, value] of Object.entries(this._header)) {
       if (value !== null) {
-        nonNullHeaders[key] = value;
+        nonNullHeaders[key2] = value;
       }
     }
     return nonNullHeaders;
@@ -3130,11 +3143,11 @@ var Chess = class {
     this.reset();
     const headers = parsedPgn.headers;
     let fen = "";
-    for (const key in headers) {
-      if (key.toLowerCase() === "fen") {
-        fen = headers[key];
+    for (const key2 in headers) {
+      if (key2.toLowerCase() === "fen") {
+        fen = headers[key2];
       }
-      this.header(key, headers[key]);
+      this.header(key2, headers[key2]);
     }
     if (!strict) {
       if (fen) {
@@ -3541,9 +3554,9 @@ function loadProgress(storage) {
   }
 }
 function mistakeExplanation(chess, played, beforeChess, beforeResult, verdict) {
-  const names = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
+  const names2 = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
   const capture = chess.moves({ verbose: true }).find((m) => m.to === played.to && m.captured);
-  let text = capture ? `${chess.turn() === "w" ? "White" : "Black"} can play ${capture.san}, capturing your ${names[capture.captured]} on ${played.to}. ` : "";
+  let text = capture ? `${chess.turn() === "w" ? "White" : "Black"} can play ${capture.san}, capturing your ${names2[capture.captured]} on ${played.to}. ` : "";
   const best = beforeResult?.moves?.[0]?.uci || beforeResult?.best;
   if (best) try {
     const m = beforeChess.move(uciMove(best));
@@ -3709,9 +3722,9 @@ var Oracle = class {
     for (const [k, v] of Object.entries(PHONE_CACHE)) this.cache.set(k, v);
   }
   async tablebase(fen) {
-    const key = fenKey(fen);
-    if (this.cache.has(key)) return this.cache.get(key);
-    if (this.pending.has(key)) return this.pending.get(key);
+    const key2 = fenKey(fen);
+    if (this.cache.has(key2)) return this.cache.get(key2);
+    if (this.pending.has(key2)) return this.pending.get(key2);
     if (Date.now() < this.disabledUntil) return null;
     if ((fen.split(" ")[0].match(/[a-z]/gi) || []).length > 7) return null;
     const task = (async () => {
@@ -3722,17 +3735,17 @@ var Oracle = class {
         const d = await r.json();
         if (!d.category || !d.moves) return null;
         const result = { ...d, source: "tablebase" };
-        this.cache.set(key, result);
+        this.cache.set(key2, result);
         return result;
       } catch {
         this.disabledUntil = Date.now() + 6e4;
         return null;
       } finally {
         clearTimeout(timer);
-        this.pending.delete(key);
+        this.pending.delete(key2);
       }
     })();
-    this.pending.set(key, task);
+    this.pending.set(key2, task);
     return task;
   }
   async analyse(fen) {
@@ -3761,6 +3774,174 @@ var Oracle = class {
     return { ...r, best: move?.uci || r.best };
   }
 };
+
+// coach.js
+var key = (fen) => fen.split(" ").slice(0, 4).join(" ");
+var names = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
+var label = (side) => side === "w" ? "White" : "Black";
+var pieces = (c) => c.board().flat().filter(Boolean);
+var distance2 = (a, b) => Math.max(Math.abs(a.charCodeAt(0) - b.charCodeAt(0)), Math.abs(Number(a[1]) - Number(b[1])));
+function passedPawns(c, side) {
+  return pieces(c).filter((p) => p.color === side && p.type === "p" && !pieces(c).some((q) => q.color !== side && q.type === "p" && Math.abs(q.square.charCodeAt(0) - p.square.charCodeAt(0)) <= 1 && (side === "w" ? q.square[1] > p.square[1] : q.square[1] < p.square[1])));
+}
+function sourceMoveNote(exercise, fen, uci) {
+  const c = new Chess(exercise.fen), matches = [];
+  for (const step of exercise.demonstrationLine || exercise.line || []) {
+    const before = c.fen(), m = c.move(typeof step === "string" ? step : step.san);
+    if (key(before) === key(fen) && m.from + m.to + (m.promotion || "") === uci && (step.text || step.note)) matches.push({ text: step.text || step.note, offset: Math.abs(Number(before.split(" ")[5]) - Number(fen.split(" ")[5])) });
+  }
+  return matches.sort((a, b) => a.offset - b.offset)[0]?.text || null;
+}
+function breakthroughBranches(fen, analysis, side) {
+  const c = new Chess(fen);
+  if (c.turn() !== side || c.isCheck()) return null;
+  const v = categoryValue(analysis?.category), allowed = v === null ? [] : (analysis.moves || []).filter((m) => categoryValue(m.category) === -v).map((m) => m.uci);
+  if (!allowed.length && analysis?.best) allowed.push(analysis.best);
+  for (const uci of allowed) {
+    const after = new Chess(fen);
+    let offer;
+    try {
+      offer = after.move(uciMove(uci));
+    } catch {
+      continue;
+    }
+    if (offer.piece !== "p" || !offer.captured || offer.promotion) continue;
+    const branches = [];
+    for (const capture of after.moves({ verbose: true }).filter((m) => m.piece === "p" && m.captured === "p")) {
+      const b = new Chess(after.fen());
+      b.move(capture);
+      const push = b.moves({ verbose: true }).find((m) => {
+        if (m.piece !== "p" || m.captured || m.promotion) return false;
+        const next = new Chess(b.fen());
+        next.move(m);
+        return passedPawns(next, side).some((p) => p.square === m.to);
+      });
+      if (push) branches.push({ capture: capture.san, push: push.san, runner: push.from, line: [uci, capture.from + capture.to, push.from + push.to] });
+    }
+    if (branches.length >= 2 && new Set(branches.map((b) => b.runner)).size >= 2) return { move: offer.san, branches: branches.slice(0, 2), text: `${offer.san} can pull apart the pawn blockade: after \u2026${branches[0].capture}, ${branches[0].push} advances a passed pawn; after \u2026${branches[1].capture}, ${branches[1].push} advances the other. Capturing one pawn clears the route for its partner. These are capture examples, not forced replies.` };
+  }
+  return null;
+}
+function positionInsight(fen, exercise, analysis) {
+  const c = new Chess(fen), side = exercise.side, all = pieces(c), enemy = side === "w" ? "b" : "w", own = all.filter((p) => p.color === side), king = own.find((p) => p.type === "k"), enemyKing = all.find((p) => p.color === enemy && p.type === "k");
+  if (c.isGameOver()) return null;
+  const id = exercise.lessonId || exercise.id;
+  if (id === "pawn-breakthrough" && c.turn() === side) {
+    const value = categoryValue(analysis?.category), candidates = value === null ? analysis?.best ? [analysis.best] : [] : (analysis.moves || []).filter((m) => categoryValue(m.category) === -value).map((m) => m.uci);
+    for (const candidate of candidates) {
+      const b = new Chess(fen);
+      let capture;
+      try {
+        capture = b.move(uciMove(candidate));
+      } catch {
+        continue;
+      }
+      if (capture.piece === "p" && capture.captured && passedPawns(b, side).some((p) => p.square === capture.to)) {
+        const promotion = capture.to[0] + (side === "w" ? "8" : "1"), oneStep = Number(capture.to[1]) === (side === "w" ? 7 : 2);
+        const kingTooFar = oneStep && enemyKing && distance2(enemyKing.square, capture.to) > 1 && distance2(enemyKing.square, promotion) > 1;
+        return { text: `The advance has opened a breakthrough: ${capture.san} removes the pawn on ${capture.to} and leaves a passed pawn there. No enemy pawn remains ahead on its file or either neighboring file.${kingTooFar ? ` The king on ${enemyKing.square} cannot reach either ${capture.to} or ${promotion} in one move, so that king alone cannot stop the next pawn advance.` : ""} The pawn offers remove blockers to free a runner, rather than keep every pawn.`, kind: "breakthrough-capture", continuation: candidate };
+      }
+    }
+    const branch = breakthroughBranches(fen, analysis, side);
+    if (branch) return { text: branch.text, kind: "breakthrough", branches: branch };
+  }
+  const runners = passedPawns(c, side).sort((a, b) => side === "w" ? Number(b.square[1]) - Number(a.square[1]) : Number(a.square[1]) - Number(b.square[1]));
+  for (const pawn2 of runners) {
+    const support = c.attackers(pawn2.square, side).filter((s) => s !== pawn2.square);
+    const advanced = side === "w" ? Number(pawn2.square[1]) : 9 - Number(pawn2.square[1]);
+    if (advanced >= 5) {
+      const promotion = pawn2.square[0] + (side === "w" ? "8" : "1"), blockers = all.filter((p) => p.square[0] === pawn2.square[0] && (side === "w" ? p.square[1] > pawn2.square[1] : p.square[1] < pawn2.square[1]));
+      const lead = `The pawn on ${pawn2.square} is passed: no enemy pawn is ahead on its file or either neighboring file.`;
+      const tail = blockers.length ? ` The ${names[blockers[0].type]} on ${blockers[0].square} still occupies its route to ${promotion}; being passed does not mean it can advance freely.` : support.length ? ` Your ${names[c.get(support[0]).type]} on ${support[0]} protects it. Keep that support as you work toward ${promotion}.` : ` Its route toward ${promotion} has no piece in front, but check the enemy king and rook before pushing; a passed pawn is not automatically unstoppable.`;
+      return { text: lead + tail, kind: "passed-pawn", claims: [{ type: "passed", square: pawn2.square }, ...support.slice(0, 1).map((from) => ({ type: "attack", from, to: pawn2.square, side }))] };
+    }
+  }
+  const pawns = all.filter((p) => p.type === "p");
+  if (king && enemyKing && pawns.length === 1) {
+    const sameFile = king.square[0] === enemyKing.square[0], sameRank = king.square[1] === enemyKing.square[1], d = distance2(king.square, enemyKing.square);
+    if ((sameFile || sameRank) && d === 2) {
+      const holder = c.turn() === side ? enemyKing : king;
+      return { text: `The kings on ${king.square} and ${enemyKing.square} have one square between them. ${label(holder.color)} holds the direct opposition because the other side must move. ${exercise.goal === "draw" ? "Use that spacing to deny the attacking king a route around your blockade." : "Use the king to win entry beside the pawn; moving the pawn too soon can give up useful waiting moves."}`, kind: "opposition" };
+    }
+  }
+  if (id === "wrong-bishop") {
+    const pawn2 = all.find((p) => p.color === enemy && p.type === "p"), bishop = all.find((p) => p.color === enemy && p.type === "b");
+    if (pawn2 && bishop && ["a", "h"].includes(pawn2.square[0])) {
+      const square = pawn2.square[0] + (enemy === "w" ? "8" : "1");
+      if (c.squareColor(square) !== c.squareColor(bishop.square)) return { text: `The bishop on ${bishop.square} is on ${c.squareColor(bishop.square)} squares; the pawn promotes on the ${c.squareColor(square)} square ${square}. That bishop can never attack the promotion corner. Keep your king able to return there instead of chasing material.`, kind: "fortress" };
+    }
+  }
+  const rook = own.find((p) => p.type === "r"), pawn = all.find((p) => p.type === "p");
+  if (rook && pawn) {
+    const behind = rook.square[0] === pawn.square[0] && (pawn.color === "w" ? rook.square[1] < pawn.square[1] : rook.square[1] > pawn.square[1]);
+    if (behind) return { text: `Your rook on ${rook.square} is behind the pawn on ${pawn.square}. ${pawn.color === side ? "As the pawn advances, the rook has room to keep supporting it from behind." : "That keeps the rook aligned with the pawn\u2019s advance, making the opponent keep it protected."} Check intervening pieces before assuming the rook already attacks or defends the pawn.`, kind: "rook-behind" };
+  }
+  if (king && pawns.length) {
+    const supported = pawns.find((p) => p.color === side && c.attackers(p.square, side).includes(king.square));
+    if (supported) return { text: `Your king on ${king.square} protects the pawn on ${supported.square}. That gives the pawn direct support, but the king must also control its route forward; advancing just because it is protected can still let the defender blockade it.`, kind: "king-support", claims: [{ type: "attack", from: king.square, to: supported.square, side }] };
+  }
+  return null;
+}
+function practiceExplanation({ exercise, beforeFen, move, fen, analysis, opponent, masked = false }) {
+  if (masked) return null;
+  const before = new Chess(beforeFen), after = new Chess(beforeFen);
+  const played = after.move(typeof move === "string" ? uciMove(move) : move);
+  const uci = played.from + played.to + (played.promotion || ""), annotation = sourceMoveNote(exercise, beforeFen, uci);
+  let action = annotation;
+  if (action && played.promotion) action += " Promotion is a milestone; keep the new piece safe and finish the conversion to checkmate.";
+  if (!action) {
+    if (played.promotion) action = `${played.san} creates a ${names[played.promotion]}, but promotion is only a milestone. Keep the new piece safe and finish the conversion.`;
+    else if (played.captured) action = `${played.san} removes ${label(played.color === "w" ? "b" : "w")}\u2019s ${names[played.captured]} from ${played.to}${after.isCheck() ? " with check" : ""}. The value of the exchange depends on the position left behind, not just the material count.`;
+    else if (played.piece === "p") {
+      const defenders = after.attackers(played.to, played.color), becamePassed = passedPawns(after, played.color).some((p) => p.square === played.to) && !passedPawns(before, played.color).some((p) => p.square === played.from);
+      action = `${played.san} ${becamePassed ? "creates a passed pawn by moving beyond the enemy pawn front" : `advances the pawn from ${played.from} to ${played.to}`}.${defenders.length ? ` It is protected there by your ${names[after.get(defenders[0]).type]} on ${defenders[0]}.` : " Check its safety before advancing it again."}`;
+    } else if (after.isCheck()) action = `${played.san} gives check, so the opponent must answer the attack on the king before continuing their plan.`;
+    else if (played.piece === "k") {
+      const targets = pieces(before).filter((p) => p.type === "p"), closer = targets.find((p) => distance2(played.to, p.square) < distance2(played.from, p.square));
+      action = closer ? `${played.san} brings your king closer to the pawn on ${closer.square}. King activity matters because it can support an advance or attack a blocker without spending a pawn move.` : `${played.san} changes the king\u2019s position without committing a pawn. Compare the new king spacing and entry squares before choosing your next move.`;
+    } else if (["q", "r"].includes(played.piece) && pieces(after).filter((p) => p.color !== played.color).every((p) => p.type === "k")) {
+      const enemyKing = pieces(after).find((p) => p.color !== played.color && p.type === "k"), escapes = after.moves({ square: enemyKing.square }).length;
+      action = `After ${played.san}, the opposing king on ${enemyKing.square} has ${escapes} legal king move${escapes === 1 ? "" : "s"}. Use your ${names[played.piece]} to limit its space while your king comes closer; leave a legal reply until you can deliver mate.`;
+    } else action = `${played.san} repositions your ${names[played.piece]} from ${played.from} to ${played.to}. ${exercise.concept || exercise.principle || "Coordinate it with your king before committing to the next stage."}`;
+  }
+  let response = null;
+  if (opponent) {
+    const b = new Chess(opponent.beforeFen), m = b.move(uciMove(opponent.uci));
+    response = sourceMoveNote(exercise, opponent.beforeFen, opponent.uci);
+    if (!response && m.captured) response = `${m.san} captures your ${names[m.captured]} on ${m.to}. Reassess the remaining pawn routes and piece safety.`;
+    else if (!response && b.isCheck()) response = `${m.san} gives check. Answer it while keeping the endgame plan in view.`;
+    if (!response && m.piece === "k") {
+      const ownKing = pieces(b).find((p) => p.color === exercise.side && p.type === "k");
+      const entry = ownKing && b.moves({ square: ownKing.square, verbose: true }).find((r) => (exercise.side === "w" ? r.to[1] > r.from[1] : r.to[1] < r.from[1]) && new Chess(opponent.beforeFen).isAttacked(r.to, m.color) && !b.isAttacked(r.to, m.color));
+      if (entry) response = `${m.san} changes the king\u2019s control: ${entry.to} was attacked before that reply, but is no longer attacked. Your king can now legally enter with ${entry.san}. Compare that entry with the pawn\u2019s route before deciding.`;
+    }
+  }
+  const insight = positionInsight(fen, exercise, analysis);
+  return { text: action, summary: annotation ? action : insight?.text || action, position: insight?.text || null, response, kind: insight?.kind || "move", claims: insight?.claims || [] };
+}
+
+// presentation.js
+var subjects = {
+  "queen-box": ["q"],
+  "rook-box": ["r"],
+  "two-rooks": ["r", "r"],
+  "wrong-bishop": ["b", "p"],
+  "philidor": ["r", "p"],
+  "lucena": ["r", "p"],
+  "connected-passers": ["r", "p"],
+  "rook-behind": ["r", "p"],
+  "pawn-breakthrough": ["p", "p"],
+  "majority-lever": ["p", "p"],
+  "outside-decoy": ["p", "k"],
+  "separated-passers": ["p", "p"],
+  "protected-anchor": ["p", "k"]
+};
+function lessonPieces(lesson) {
+  return (subjects[lesson.lessonId || lesson.id] || ["k", "p"]).map((type) => ({ color: "w", type }));
+}
+function coursePieces(id) {
+  return (id === "pawn-play" ? ["p", "p"] : ["k", "r"]).map((type) => ({ color: "w", type }));
+}
 
 // completion.js
 function exerciseResult(chess, exercise) {
@@ -3834,14 +4015,14 @@ function makeExercises(lessons2, transfer) {
 function sanitizeBackup(data, validKeys, now = Date.now()) {
   if (data?.app !== "endgame-lab-v2" || ![1, 2].includes(data.version) || !data.progress || typeof data.progress !== "object" || Array.isArray(data.progress)) throw new Error("This is not an Endgame Lab V2 backup.");
   const clean = {};
-  for (const key of validKeys) {
-    const r = data.progress[key];
+  for (const key2 of validKeys) {
+    const r = data.progress[key2];
     if (!r || typeof r !== "object" || Array.isArray(r)) continue;
     const c = {};
     for (const k of ["seen", "passed"]) c[k] = r[k] === true;
     for (const k of ["attempts", "successes", "streak", "last", "lastHints", "lastMistakes", "lastRetries", "lastRefutations", "independentSuccesses", "assistedSuccesses", "independentStreak", "lastIndependent", "lastAssisted"]) c[k] = Number.isFinite(r[k]) && r[k] >= 0 ? Math.min(r[k], ["last", "lastIndependent", "lastAssisted"].includes(k) ? now : 1e5) : 0;
     if (["independent", "assisted", "unfinished-goal"].includes(r.lastOutcome)) c.lastOutcome = r.lastOutcome;
-    clean[key] = c;
+    clean[key2] = c;
   }
   return clean;
 }
@@ -3850,13 +4031,13 @@ function aggregateLesson(lessonId, exercises2, progress2) {
   return { seen: !!progress2[lessonId]?.seen, independent: records.some((r) => r.independentSuccesses > 0), assisted: records.some((r) => r.assistedSuccesses > 0), legacy: records.some((r) => r.passed && !r.independentSuccesses && !r.assistedSuccesses), attempts: records.reduce((n, r) => n + (r.attempts || 0), 0), review: records.some((r) => reviewDue(r)), transfers: exercises2.filter((e) => e.lessonId === lessonId && e.exerciseKind === "transfer").length, transferPassed: exercises2.filter((e) => e.lessonId === lessonId && e.exerciseKind === "transfer" && progress2[e.progressKey]?.independentSuccesses > 0).length };
 }
 function continuationNote(before, move, after) {
-  const names = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
+  const names2 = { p: "pawn", n: "knight", b: "bishop", r: "rook", q: "queen", k: "king" };
   if (after.isCheckmate()) return "Checkmate: the king has no legal response to the check.";
   if (after.isStalemate()) return "Stalemate: the king is not in check and there are no legal moves. The game is drawn.";
-  if (after.isInsufficientMaterial()) return (move.captured ? `The ${names[move.captured]} is captured. ` : "") + "The remaining material cannot deliver checkmate. This is a draw.";
-  if (move.captured) return `${move.color === "w" ? "White" : "Black"} captures the ${names[move.captured]} on ${move.to}${after.isCheck() ? " with check" : ""}. This is a concrete consequence to compare with the position before your mistake.`;
+  if (after.isInsufficientMaterial()) return (move.captured ? `The ${names2[move.captured]} is captured. ` : "") + "The remaining material cannot deliver checkmate. This is a draw.";
+  if (move.captured) return `${move.color === "w" ? "White" : "Black"} captures the ${names2[move.captured]} on ${move.to}${after.isCheck() ? " with check" : ""}. This is a concrete consequence to compare with the position before your mistake.`;
   if (before.moves().length === 1) return "This is the only legal move in this position.";
-  if (move.promotion) return `The pawn promotes to a ${names[move.promotion]}. Check the resulting position rather than assuming every promotion wins.`;
+  if (move.promotion) return `The pawn promotes to a ${names2[move.promotion]}. Check the resulting position rather than assuming every promotion wins.`;
   if (after.isCheck()) return "The check forces the opponent to answer it before pursuing another plan.";
   return "One calculated continuation against accurate resistance. Other moves can share the same outcome; this is not claimed to be forced.";
 }
@@ -3885,11 +4066,11 @@ function publishedReplay(example) {
 }
 function mergeProgress(existing, incoming) {
   const out = { ...existing };
-  for (const [key, newer] of Object.entries(incoming)) {
-    const old = out[key] || {}, recent = (newer.last || 0) > (old.last || 0) ? newer : old, merged = { ...old, ...newer, ...recent };
+  for (const [key2, newer] of Object.entries(incoming)) {
+    const old = out[key2] || {}, recent = (newer.last || 0) > (old.last || 0) ? newer : old, merged = { ...old, ...newer, ...recent };
     for (const field of ["seen", "passed"]) merged[field] = !!old[field] || !!newer[field];
     for (const field of ["attempts", "successes", "independentSuccesses", "assistedSuccesses", "last", "lastIndependent", "lastAssisted"]) merged[field] = Math.max(old[field] || 0, newer[field] || 0);
-    out[key] = merged;
+    out[key2] = merged;
   }
   return out;
 }
@@ -3968,9 +4149,10 @@ var category = (l) => l.category || l.group || "Foundations";
 var intro = (l) => l.intro || l.summary;
 var principle = (l) => l.principle || l.concept;
 var note = (m) => m.note || m.text;
-var symbol = (l) => category(l).toLowerCase().includes("rook") ? "\u265C" : category(l).toLowerCase().includes("pawn") ? "\u265F" : category(l).toLowerCase().includes("minor") ? "\u265D" : "\u2654";
+var pieceIcons = (ps) => ps.map((p) => `<img src="${PHONE_PIECES[p.color + p.type.toUpperCase()]}" alt="" draggable="false">`).join("");
+var symbol = (l) => pieceIcons(lessonPieces(l));
 var record = (l) => progress[l.id] || {};
-var count = (key) => lessons.filter((l) => record(l)[key]).length;
+var count = (key2) => lessons.filter((l) => record(l)[key2]).length;
 var link = (l, mode = "lesson") => "#" + mode + "/" + l.id;
 function completeLesson(l) {
   const r = record(l);
@@ -3980,8 +4162,8 @@ function completeLesson(l) {
 function markAttempt(s, success) {
   if (s.free || s.recorded) return;
   s.recorded = true;
-  const key = s.lesson.progressKey || s.lesson.id;
-  progress[key] = recordAttempt(progress[key] || {}, { success, hints: s.hints, mistakes: s.mistakes, retries: s.retries, refutations: s.refutations });
+  const key2 = s.lesson.progressKey || s.lesson.id;
+  progress[key2] = recordAttempt(progress[key2] || {}, { success, hints: s.hints, mistakes: s.mistakes, retries: s.retries, refutations: s.refutations });
   save();
 }
 function sourceHTML(l) {
@@ -3997,9 +4179,9 @@ function filtersHTML(active, items) {
 }
 function home() {
   const next = lessons.find((l) => !record(l).seen) || lessons[0];
-  return `<section class="hero"><div><div class="eyebrow">Learn the ending. Build the advantage.</div><h1>More than knowing<br>the next move.</h1><p>Learn essential endgame techniques, then explore how to create a passed pawn. Watch a plan unfold and practice applying it in different positions.</p><div class="button-row"><a class="button" href="${link(next)}">${count("seen") ? "Continue learning" : "Start learning"} \u2192</a><a class="button secondary" href="#practice">Practice a position</a></div></div><aside class="feature-card"><div class="eyebrow">Continue your learning path</div><h3>${esc(next.title)}</h3><p>${esc(principle(next))}</p><div class="mini-progress"><i style="width:${100 * count("seen") / lessons.length}%"></i></div><a href="${link(next)}">${count("seen")} of ${lessons.length} demonstrations explored \u2192</a></aside></section><div class="section-head"><div><div class="eyebrow">Choose your course</div><h2>Two ways to grow.</h2><p>Finish favorable positions\u2014and learn how to create them.</p></div><span class="badge release-badge">V2.1 \xB7 Pawn play</span></div><div class="course-grid">${COURSE_SECTIONS.map((c) => {
+  return `<section class="hero"><div><div class="eyebrow">Learn the ending. Build the advantage.</div><h1>More than knowing<br>the next move.</h1><p>Learn essential endgame techniques, then explore how to create a passed pawn. Watch a plan unfold and practice applying it in different positions.</p><div class="button-row"><a class="button" href="${link(next)}">${count("seen") ? "Continue learning" : "Start learning"} \u2192</a><a class="button secondary" href="#practice">Practice a position</a></div></div><aside class="feature-card"><div class="eyebrow">Continue your learning path</div><h3>${esc(next.title)}</h3><p>${esc(principle(next))}</p><div class="mini-progress"><i style="width:${100 * count("seen") / lessons.length}%"></i></div><a href="${link(next)}">${count("seen")} of ${lessons.length} demonstrations explored \u2192</a></aside></section><div class="section-head"><div><div class="eyebrow">Choose your course</div><h2>Two ways to grow.</h2><p>Finish favorable positions\u2014and learn how to create them.</p></div><span class="badge release-badge">V2.2 \xB7 Guided feedback</span></div><div class="course-grid">${COURSE_SECTIONS.map((c) => {
     const list = lessons.filter((l) => l.section === c.id), seen = list.filter((l) => record(l).seen).length;
-    return `<a class="course-card" href="#course/${c.id}"><div class="course-card-top"><span class="lesson-symbol">${c.symbol}</span><span class="eyebrow">${esc(c.subtitle)}</span></div><h2>${esc(c.title)}</h2><p>${esc(c.description)}</p><div class="progress-track"><i style="width:${100 * seen / list.length}%"></i></div><div class="card-bottom"><span>${list.length} lessons \xB7 ${seen} explored</span><strong>Open course \u2192</strong></div></a>`;
+    return `<a class="course-card" href="#course/${c.id}"><div class="course-card-top"><span class="lesson-symbol">${pieceIcons(coursePieces(c.id))}</span><span class="eyebrow">${esc(c.subtitle)}</span></div><h2>${esc(c.title)}</h2><p>${esc(c.description)}</p><div class="progress-track"><i style="width:${100 * seen / list.length}%"></i></div><div class="card-bottom"><span>${list.length} lessons \xB7 ${seen} explored</span><strong>Open course \u2192</strong></div></a>`;
   }).join("")}</div><aside class="callout"><div><h3>Can you recognize the idea in a different position?</h3><p>Practice includes published transfer positions. Mixed practice hides the technique until you choose to reveal it.</p></div><button class="button secondary" id="mixed-start">Try mixed practice \u2192</button></aside>`;
 }
 function coursePage(id) {
@@ -4102,7 +4284,7 @@ function bindPage() {
 }
 function startSession(lesson, play, masked = false, free = false) {
   const chess = new Chess(lesson.fen);
-  session = { lesson, chess, tab: play ? "practice" : "learn", index: 0, flipped: lesson.side === "b", selected: null, last: null, hintSquares: [], busy: false, awaitingReply: false, history: [], userMoves: 0, hints: 0, mistakes: 0, retries: 0, refutations: 0, recorded: false, result: null, feedback: null, evaluation: null, lastError: null, replay: null, masked, challenge: masked, free };
+  session = { lesson, chess, tab: play ? "practice" : "learn", index: 0, flipped: lesson.side === "b", selected: null, last: null, hintSquares: [], busy: false, awaitingReply: false, history: [], userMoves: 0, hints: 0, mistakes: 0, retries: 0, refutations: 0, recorded: false, result: null, feedback: null, evaluation: null, lastError: null, replay: null, moveReview: null, coaching: null, masked, challenge: masked, free };
   renderSession();
   window.scrollTo(0, 0);
   if (play) beginPractice();
@@ -4169,7 +4351,7 @@ function renderPanel() {
     $("#watch-demo").onclick = () => switchTab("demo");
   } else if (s.tab === "demo") {
     const n = s.index, line = l.line || [], step = line[n - 1];
-    panel.innerHTML = `<div class="demo-step"><span>${n === 0 ? "Starting position" : "Step " + n + " of " + line.length}</span><span>Published example line</span></div><div class="mini-progress" style="background:#e2eae5"><i style="background:var(--accent);width:${100 * n / Math.max(1, line.length)}%"></i></div><div class="demo-san">${n === 0 ? "See the plan." : esc(step.san)}</div><p class="demo-note">${esc(n === 0 ? l.demoIntro || principle(l) : note(step))}</p><div class="move-list" aria-label="Demonstration moves"><button class="move-chip ${n === 0 ? "active" : ""}" data-step="0">Start</button>${line.map((m, i) => `<button class="move-chip ${n === i + 1 ? "active" : ""}" data-step="${i + 1}">${moveNumber(l.fen, i)}${esc(m.san)}</button>`).join("")}</div><div class="button-row"><button class="button secondary" id="demo-prev" ${n === 0 ? "disabled" : ""}>\u2190 Back</button><button class="button" id="demo-next" ${n === line.length ? "disabled" : ""}>Next move \u2192</button></div>${n === line.length ? `<div class="feedback good"><h3>Now apply the idea.</h3>You have explored one published line. Practice can take a different path, so use the plan rather than memorizing the replies.</div><div class="lesson-end-actions"><button class="button full" id="try-practice">Practice this technique \u2192</button>${nextLessonHTML(l)}${l.mistakeExample ? '<button class="button secondary" id="published-example">Compare the automatic recapture</button>' : ""}</div>` : ""}${sourceHTML(l)}`;
+    panel.innerHTML = `<div class="demo-step"><span>${n === 0 ? "Starting position" : "Step " + n + " of " + line.length}</span><span>Published example line</span></div><div class="mini-progress" style="background:#e2eae5"><i style="background:var(--accent);width:${100 * n / Math.max(1, line.length)}%"></i></div><div class="demo-san">${n === 0 ? "See the plan." : esc(step.san)}</div><p class="demo-note">${esc(n === 0 ? l.demoIntro || principle(l) : note(step))}</p><div class="move-list" aria-label="Demonstration moves"><button class="move-chip ${n === 0 ? "active" : ""}" data-step="0">Start</button>${line.map((m, i) => `<button class="move-chip ${n === i + 1 ? "active" : ""}" data-step="${i + 1}">${moveNumber(l.fen, i)}${esc(m.san)}</button>`).join("")}</div><div class="button-row"><button class="button secondary" id="demo-prev" ${n === 0 ? "disabled" : ""}>\u2190 Back</button><button class="button" id="demo-next" ${n === line.length ? "disabled" : ""}>Next move \u2192</button></div>${n === line.length ? `<div class="feedback good"><h3>Now apply the idea.</h3>You have explored one published line. Practice can take a different path, so use the plan rather than memorizing the replies.</div><div class="lesson-end-actions"><button class="button full" id="try-practice">Practice this technique \u2192</button>${l.mistakeExample ? '<button class="button secondary" id="published-example">Compare the automatic recapture</button>' : ""}</div><nav class="lesson-navigation" aria-label="Browse lessons"><p>Continue when you\u2019re ready</p>${nextLessonHTML(l)}<a class="inline-link" href="#course/${l.section || "core"}">Browse this course</a></nav>` : ""}${sourceHTML(l)}`;
     $$("[data-step]").forEach((b) => b.onclick = () => demoStep(Number(b.dataset.step)));
     $("#demo-prev").onclick = () => demoStep(n - 1);
     $("#demo-next").onclick = () => demoStep(n + 1);
@@ -4183,7 +4365,7 @@ function renderPanel() {
     const independent = !s.free && s.result?.success && !s.hints && !s.mistakes && !s.retries && !s.refutations;
     const hidden = s.masked && !s.result;
     const result = s.result ? `<div class="result ${s.result.success ? "" : "failed"}"><span class="badge ${independent ? "complete" : ""}">${s.free ? "Free play result" : s.result.success ? independent ? "Independent success" : "Assisted completion" : "Goal not achieved"}</span><h3 style="margin-top:12px">${esc(s.result.title)}</h3><p>${esc(s.result.reason)}</p><p class="result-detail">${s.free ? "Free play does not award guided lesson completion." : s.result.success ? independent ? "You completed the goal without hints, mistakes, retries or refutation replays." : "Help is part of learning. Return to this position without aids for an independent success." : "Review the consequence and try the decision again."}</p><div class="button-row"><button class="button" id="result-retry">Practice again</button>${!s.result.success && s.history.length ? '<button class="button secondary" id="result-undo">Retry decision</button>' : ""}</div><div class="lesson-end-actions">${nextLessonHTML(parent)}<a class="inline-link" href="#practice-for/${parent.id}">More practice for this technique \u2192</a></div><p style="margin:14px 0 0;font-size:11px">${s.hints} hints \xB7 ${s.mistakes} mistakes \xB7 ${s.retries} retries \xB7 ${s.refutations} replay${s.refutations === 1 ? "" : "s"}</p></div>` : "";
-    panel.innerHTML = `<div class="eyebrow">${s.free ? "Unrestricted engine play" : hidden ? "Mixed practice" : "Put the idea into practice"}</div><h2>${l.goal === "draw" ? "Hold your ground." : "Find the winning plan."}</h2><p>${s.free ? "Play a full game from this position against unrestricted Stockfish." : l.goal === "draw" ? "Execute the drawing technique against meaningful resistance." : "Convert the position all the way to checkmate."}</p><div class="goal-line"><strong>You play ${l.side === "w" ? "White" : "Black"}</strong><span>\xB7</span><span>${s.userMoves} move${s.userMoves === 1 ? "" : "s"} played</span></div><span class="outcome-label">${esc(evalText)}</span><div class="feedback ${s.feedback?.type || ""}" role="status" aria-live="polite"><h3>${esc(s.feedback?.title || (s.busy ? "Preparing your opponent\u2026" : "Your move."))}</h3>${esc(s.feedback?.text || (hidden ? "The technique is hidden. Inspect the position and choose your plan." : l.hint || principle(l)))}</div>${s.lastError ? `<button class="button secondary full" id="replay-error" style="margin-top:12px" ${s.busy ? "disabled" : ""}>Replay the consequence \u2192</button>` : ""}${result}${!s.result ? `<div class="button-row" style="margin-top:20px">${s.awaitingReply ? '<button class="button small" id="continue-reply">Continue from here \u2192</button>' : ""}<button class="button secondary small" id="hint" ${s.busy || s.chess.turn() !== l.side ? "disabled" : ""}>Show a hint</button><button class="button secondary small" id="undo" ${s.busy || !s.history.length ? "disabled" : ""}>Retry move</button><button class="text-button" id="reconnect" ${s.busy ? "disabled" : ""}>Retry analysis</button></div>` : ""}<div class="move-list" aria-label="Moves played">${s.chess.history().map((m, i) => `<span class="move-chip">${moveNumber(l.fen, i)}${esc(m)}</span>`).join("")}</div><div class="warning">${l.goal === "draw" ? "Defend until the game actually ends in a draw. A move count or a tablebase evaluation alone does not complete the exercise." : "Reach checkmate. Promotion and other achievements are milestones; you can keep playing after them."} ${e?.source === "engine" ? "Feedback here is a Stockfish estimate, not a tablebase proof." : ""}</div>${hidden ? '<button class="text-button" id="reveal-topic">Reveal technique & source (uses a hint)</button>' : `<a class="inline-link" id="review-idea" href="#lesson/${parent.id}">Review the lesson \u2192</a>${sourceHTML(l)}`}`;
+    panel.innerHTML = `<div class="eyebrow">${s.free ? "Unrestricted engine play" : hidden ? "Mixed practice" : "Put the idea into practice"}</div><h2>${l.goal === "draw" ? "Hold your ground." : "Find the winning plan."}</h2><p>${s.free ? "Play a full game from this position against unrestricted Stockfish." : l.goal === "draw" ? "Execute the drawing technique against meaningful resistance." : "Convert the position all the way to checkmate."}</p><div class="goal-line"><strong>You play ${l.side === "w" ? "White" : "Black"}</strong><span>\xB7</span><span>${s.userMoves} move${s.userMoves === 1 ? "" : "s"} played</span></div><span class="outcome-label">${esc(evalText)}</span><div class="feedback ${s.feedback?.type || ""}" role="status" aria-live="polite"><h3>${esc(s.feedback?.title || (s.busy ? "Preparing your opponent\u2026" : "Your move."))}</h3>${esc(s.feedback?.text || (hidden ? "The technique is hidden. Inspect the position and choose your plan." : l.hint || principle(l)))}</div>${s.coaching && !hidden ? `<details class="coaching-details"><summary>Move and reply explained</summary><h3>Your move</h3><p>${esc(s.coaching.text)}</p>${s.coaching.response ? "<h3>Opponent\u2019s reply</h3><p>" + esc(s.coaching.response) + "</p>" : ""}${s.coaching.position ? "<h3>Position now</h3><p>" + esc(s.coaching.position) + "</p>" : ""}</details>` : ""}${s.lastError ? `<button class="button secondary full" id="replay-error" style="margin-top:12px" ${s.busy ? "disabled" : ""}>Replay the consequence \u2192</button>` : ""}${result}${!s.result ? `<div class="button-row" style="margin-top:20px">${s.awaitingReply ? '<button class="button small" id="continue-reply">Continue from here \u2192</button>' : ""}<button class="button secondary small" id="hint" ${s.busy || s.chess.turn() !== l.side ? "disabled" : ""}>Show a hint</button><button class="button secondary small" id="undo" ${s.busy || !s.history.length ? "disabled" : ""}>Retry move</button><button class="text-button" id="reconnect" ${s.busy ? "disabled" : ""}>Retry analysis</button></div>` : ""}<div class="move-list" aria-label="Moves played">${s.chess.history().map((m, i) => `<span class="move-chip">${moveNumber(l.fen, i)}${esc(m)}</span>`).join("")}</div><div class="warning">${l.goal === "draw" ? "Defend until the game actually ends in a draw. A move count or a tablebase evaluation alone does not complete the exercise." : "Reach checkmate. Promotion and other achievements are milestones; you can keep playing after them."} ${e?.source === "engine" ? "Feedback here is a Stockfish estimate, not a tablebase proof." : ""}</div>${hidden ? '<button class="text-button" id="reveal-topic">Reveal technique & source (uses a hint)</button>' : `<a class="inline-link" id="review-idea" href="#lesson/${parent.id}">Review the lesson \u2192</a>${sourceHTML(l)}`}`;
     if ($("#replay-error")) $("#replay-error").onclick = openRefutation;
     if ($("#continue-reply")) $("#continue-reply").onclick = continueReply;
     if ($("#hint")) $("#hint").onclick = hint;
@@ -4232,11 +4414,16 @@ function renderMobileControls(s) {
   }
   if (s.tab === "demo") {
     const n = s.index, line = s.lesson.line;
-    box.innerHTML = `<p><strong>${n ? esc(line[n - 1].san) : "Starting position"} \xB7 </strong>${esc(n ? note(line[n - 1]) : principle(s.lesson))}</p><div class="button-row"><button class="button secondary small" id="mobile-prev" ${!n ? "disabled" : ""}>\u2190 Back</button><span class="muted">${n} / ${line.length}</span>${n === line.length ? nextLessonHTML(s.lesson, "button small") : '<button class="button small" id="mobile-next">Next move \u2192</button>'}</div>`;
+    box.innerHTML = `<p><strong>${n ? esc(line[n - 1].san) : "Starting position"} \xB7 </strong>${esc(n ? note(line[n - 1]) : principle(s.lesson))}</p><div class="button-row"><button class="button secondary small" id="mobile-prev" ${!n ? "disabled" : ""}>\u2190 Back</button><span class="muted">${n} / ${line.length}</span><button class="button small" id="mobile-next" ${n === line.length ? "disabled" : ""}>${n === line.length ? "Demo finished" : "Next move \u2192"}</button></div>`;
     $("#mobile-prev").onclick = () => demoStep(n - 1);
     if ($("#mobile-next")) $("#mobile-next").onclick = () => demoStep(n + 1);
   } else {
-    box.innerHTML = `<p><strong>${esc(s.result?.title || s.feedback?.title || (s.busy ? "Analysing\u2026" : "Your move."))}</strong>${s.feedback?.text ? " " + esc(s.feedback.text) : ""}</p><div class="button-row">${s.result ? nextLessonHTML(parentLesson(s), "button small") : `<button class="button secondary small" id="mobile-hint" ${s.busy || s.chess.turn() !== s.lesson.side ? "disabled" : ""}>Hint</button><button class="button secondary small" id="mobile-undo" ${s.busy || !s.history.length ? "disabled" : ""}>Retry</button>${s.lastError ? '<button class="button secondary small" id="mobile-refute" ' + (s.busy ? "disabled" : "") + ">See why</button>" : ""}${s.awaitingReply ? '<button class="button small" id="mobile-continue">Continue \u2192</button>' : ""}`}<span class="muted">${s.busy ? "Thinking\u2026" : s.lesson.side === "w" ? "You play White" : "You play Black"}</span></div>`;
+    box.innerHTML = `<p><strong>${esc(s.result?.title || s.feedback?.title || (s.busy ? "Analysing\u2026" : "Your move."))}</strong>${s.feedback?.text ? " " + esc(s.feedback.text) : ""}</p><div class="button-row">${s.result ? nextLessonHTML(parentLesson(s), "button small") : `<button class="button secondary small" id="mobile-hint" ${s.busy || s.chess.turn() !== s.lesson.side ? "disabled" : ""}>Hint</button><button class="button secondary small" id="mobile-undo" ${s.busy || !s.history.length ? "disabled" : ""}>Retry</button>${s.lastError ? '<button class="button secondary small" id="mobile-refute" ' + (s.busy ? "disabled" : "") + ">See why</button>" : ""}${s.awaitingReply ? '<button class="button small" id="mobile-continue">Continue \u2192</button>' : ""}`}${s.coaching ? '<button class="text-button" id="mobile-explanation">Explanation</button>' : ""}<span class="muted">${s.busy ? "Thinking\u2026" : s.lesson.side === "w" ? "You play White" : "You play Black"}</span></div>`;
+    if ($("#mobile-explanation")) $("#mobile-explanation").onclick = () => {
+      const details = $(".coaching-details");
+      if (details) details.open = true;
+      $(".lesson-panel").scrollIntoView({ block: "start", behavior: "smooth" });
+    };
     if ($("#mobile-hint")) $("#mobile-hint").onclick = hint;
     if ($("#mobile-undo")) $("#mobile-undo").onclick = undo;
     if ($("#mobile-refute")) $("#mobile-refute").onclick = openRefutation;
@@ -4262,6 +4449,8 @@ function switchTab(tab) {
   s.replay = null;
   s.lastError = null;
   s.pendingMove = null;
+  s.moveReview = null;
+  s.coaching = null;
   s.tab = tab;
   s.chess = new Chess(s.lesson.fen);
   s.last = null;
@@ -4386,6 +4575,7 @@ async function userMove(move) {
   if (s.busy) return;
   s.busy = true;
   s.hintSquares = [];
+  s.coaching = null;
   const before = s.evaluation, beforeFen = s.chess.fen();
   let played;
   try {
@@ -4431,6 +4621,7 @@ async function reviewUserMove(s, stamp) {
   s.evaluation = after;
   const verdict = review.verdict;
   s.pendingMove = null;
+  s.moveReview = { beforeFen, move: played.from + played.to + (played.promotion || ""), verdict };
   if (verdict.mistake) {
     s.mistakes++;
     s.lastError = { beforeFen, afterFen: s.chess.fen(), played: played.from + played.to + (played.promotion || ""), san: played.san, historyIndex, exact: verdict.exact };
@@ -4441,6 +4632,7 @@ async function reviewUserMove(s, stamp) {
   }
   const milestone = instructionalMilestone(played, after, s.chess, s.lesson, s.userMoves);
   if (milestone && !verdict.mistake) s.feedback = { type: "good", ...milestone };
+  updateCoaching(s);
   if (verdict.mistake) {
     s.awaitingReply = true;
     s.busy = false;
@@ -4474,6 +4666,7 @@ async function engineMove(s, stamp) {
     }
     throw new Error("The engine returned no legal move.");
   }
+  const replyFen = s.chess.fen();
   const m = s.chess.move(uciMove(r.best));
   s.last = [m.from, m.to];
   sound();
@@ -4484,9 +4677,16 @@ async function engineMove(s, stamp) {
   }
   s.evaluation = await oracle.analyse(s.chess.fen());
   if (stamp !== token) return;
+  updateCoaching(s, { beforeFen: replyFen, uci: r.best });
   s.busy = false;
   drawBoard();
   renderPanel();
+}
+function updateCoaching(s, opponent) {
+  const review = s.moveReview;
+  if (!review || review.verdict.mistake || s.masked || s.result) return;
+  s.coaching = practiceExplanation({ exercise: s.lesson, ...review, fen: s.chess.fen(), analysis: s.evaluation, opponent, masked: s.masked });
+  if (s.coaching && s.feedback?.type === "good") s.feedback = { ...s.feedback, text: s.coaching.summary };
 }
 function finish(s, result) {
   s.busy = false;
@@ -4504,6 +4704,8 @@ function undo() {
   s.replay = null;
   s.lastError = null;
   s.pendingMove = null;
+  s.moveReview = null;
+  s.coaching = null;
   s.recorded = false;
   while (s.chess.history().length > h.ply) s.chess.undo();
   s.userMoves = h.userMoves;
