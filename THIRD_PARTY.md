@@ -45,3 +45,11 @@ Exact small-piece results are obtained from Lichess's public Syzygy service. Ori
 
 - https://github.com/lichess-org/lila-tablebase
 - https://lichess.org/page/tablebase
+
+## V2.1 pawn course and transfer sources
+
+Primary pawn instruction: Dr Dave Regis / Devon Junior Chess Association (DrDaveExeter on Lichess), exact study https://lichess.org/study/PHdicszX . Supporting coach articles are linked per lesson. Additional transfer positions: https://lichess.org/study/JbryewCL (quickfinger) and https://lichess.org/study/kbSEH1nW (jomega).
+
+Official Lichess Practice transfers: Piece Checkmates I https://lichess.org/study/BJy6fEDf , Opposition https://lichess.org/study/A4ujYOer , Key Squares https://lichess.org/study/xebrDvFe . Exact public chapter references and source positions appear in data/practice.json and the fact-only PGN archives; no comments were copied verbatim.
+
+Phone edition: application code, curriculum, cache, styles, and Cburnett artwork are embedded in index.html. The original library notices remain in the bundled JavaScript and the separate license documents. The full project source is in SOURCE-CODE.zip; npm ci restores pinned third-party binaries. esbuild 0.25.12 (MIT, https://github.com/evanw/esbuild) is a build-time tool and is not a runtime service.

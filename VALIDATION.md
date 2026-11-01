@@ -1,51 +1,51 @@
-# Validation record
+# Endgame Lab V2.1 validation
 
-Validated 2026-10-31. The original GitHub repository and live V1 site were never written to.
+Completed 2026-11-01. No files were pushed to the user's GitHub repositories, and the original site was untouched.
 
-## Automated checks: 42 passing tests
+## Reproducible automated checks
 
-`npm test` passed with Node 24.22.1. Tests include:
+**125 automated tests pass** with `npm test`, including the real Stockfish 18 WASM/UCI engine. Coverage includes:
 
-- All 16 starting FENs load and are nonterminal; every one of the 273 demonstration plies is legal in chess.js 1.4.0.
-- Exact source chapter attribution and substantive per-move annotations.
-- Stockfish 18 real WASM/UCI initialization, one reused worker, serialized concurrent requests, and a legal engine reply in all 16 starting positions.
-- Tablebase perspective for both colors, winning and drawing alternatives, losing a win, losing a defensive draw, and engine-estimate perspective.
-- Fifty-move-aware categories, unknown categories falling back to an engine estimate, network failure/cooldown behavior, and halfmove-aware cached keys.
-- All four legal promotion choices; outcome-preserving promotion preferences for the opponent.
-- Sourced checkmate, stalemate, insufficient material and fifty-move outcomes.
-- Move retries retaining threefold repetition history.
-- Contextual feedback that identifies a capturable queen and a legal outcome-preserving alternative.
-- Corrupt progress recovery, spaced review intervals, and project-relative asset URLs for GitHub Pages subpaths.
-- All chess piece SVGs and engine WASM included.
+- Preserved original lesson IDs, two separate course sections, 22 distinct sourced transfer starts, all primary lines legal and nonterminal starting positions.
+- Every core forced-move label checked against the exact number of legal moves.
+- 41 explicit attack-map assertions for instructional claims, including king/rook support, pawn direction, and promotion-square control.
+- The source-derived connected-passers regression: a rook on g7 does not protect a queen on h8; ...Rxh8 is legal; the tablebase changes from a win before h8=Q? to a draw afterward.
+- Promotion stays playable even in a verified win. It does not complete a winning exercise. Twenty defensive moves are feedback only. Actual mate and actual game draws remain valid endpoints.
+- Guided defense avoids the tablebase-first d6 pawn surrender after ...Kd7 when Ke5 maintains pressure, while still allowing a necessary promotion/capture or the published final stalemate when meaningful resistance is exhausted.
+- Guided selection is legal and preserves the exact outcome throughout **79 audited computer-to-move defensive source positions**. Seventy-six are drawn positions; three belong to a published refutation after the defender's ...Ke7? error and are correctly winning for the attacker. They are not mislabeled as sound model defense.
+- Free engine play bypasses guided/tablebase move selection entirely. Real UCI searches respect explicit preserving-move root constraints.
+- Analysis across tablebase/engine coverage boundaries compares two compatible scores, never an exact category against a missing estimate. Missing scores pause the move review; retrying reviews the original decision before the opponent continues.
+- Serialized worker searches, initialization and error fallback, legal engine replies from all 22 lesson starts, exact/estimated perspective for both colors, fifty-move-aware cache keys and uncertain-category fallback.
+- Separate assisted/independent progress, preservation of older completions, spaced review, backward-compatible backups, non-destructive backup merging, and next-lesson/section boundaries.
+- Legal calculated refutations, source-published mistake replay, cancellation protection and preservation of the actual game while replaying.
 
-`python3 tests/validate.py` independently passed using python-chess 1.11.2: all 16 starting positions structurally valid, all 273 moves legal, and every mainline equal to the fact-only archived source PGN.
+`python3 tests/validate.py` independently passes with python-chess: **22 lessons, 22 transfer starts, 45 source records, 587 legal published plies**, every archived mainline equal to the source facts in the application. These comprise 349 demonstration plies, 232 transfer continuations and a six-ply published mistake example.
 
-## Independent outcome audit
+## Objective source audit
 
-Lichess Syzygy tablebase responses were checked for **64 distinct positions**: all 16 starts, two intermediate checkpoints per lesson, and every final demonstration position. All expected learner-side outcomes matched, with **zero mismatches**. The returned legal-move categories independently verified **48 further source plies**, also with zero goal mismatches.
+All **42 exercise starts with seven or fewer pieces** have exact cached Syzygy outcomes matching their learner-side goals. The two eight-piece breakthrough starts and their source plies were checked with real Stockfish rather than presented as Syzygy proofs. The pawn audit also checks 77 learner-to-move source positions/moves exactly, with zero reported goal mismatches. The published automatic-recapture mistake and its final draw were verified separately.
 
-The full machine-readable record is `tests/validation-curriculum.json`; exact responses are in `data/tablebase-cache.json`. This is a sampled outcome audit, not a claim that every intermediate demonstration FEN was separately queried. All moves were checked for legality.
+There are **247 cached FENs**. Cache keys retain the halfmove clock. Detailed records are in `tests/validation-curriculum.json`, `tests/core-transfer-validation.json`, `tests/pawn-quality-report.json`, `tests/pawn-mistake-audit.json`, `tests/educational-regressions.json`, and `tests/defensive-source-audit.json`.
+
+This is not a claim that every legal continuation or every sentence of prose has been exhaustively machine-proved. Source moves are legally replayed; concrete annotated attack facts and critical outcomes have independent checks. Live play is evaluated afresh.
 
 ## Interactive browser checks
 
-Tested in the provided Chromium browser through the actual UI:
+Exercised through the actual Chromium UI:
 
-- Learning catalog, filters, three lesson stages, next/back and direct demonstration move selection.
-- Published queen-mate endpoint and demonstration-completion progress.
-- Real Stockfish worker/WASM startup and engine replies.
-- Winning pawn exercise completed through the promotion dialog and exact winning-promotion result (7 user moves); hints counted, no false draw on load.
-- Defensive square-rule exercise completed at a real insufficient-material draw; correct learner-side outcome saved.
-- Intentional queen blunder produced exact drawn feedback, named the opponent capture and a winning alternative, and paused for retry/continue.
-- Retry move restored the exact decision point and turn.
-- Progress remained after a browser reload; export control generated the progress backup/download notification.
-- Desktop layout at the browser's 1348-pixel viewport.
-- Mobile CSS layout and interactions in a 375 × 812 same-origin viewport. No horizontal overflow (360px usable viewport including scrollbar), correctly sized board, fitting navigation and accessible fixed replay controls.
-- Native source attribution links and separate original-site link remain available.
+- Course overview, separate six-lesson pawn course, source links, catalog filters and mixed practice without revealing the technique.
+- Uninterrupted source demonstrations, optional published recapture comparison, next-lesson links and mobile next-lesson navigation.
+- A complete winning pawn exercise: promotion after seven user moves left the board playable and awarded no completion; play continued until actual checkmate at move 15. Only then was assisted completion recorded.
+- A complete guided opposition defense: the computer retained its pawn, varied the source continuation correctly rather than looping an earlier occurrence, and required 12 correct defensive moves before the published stalemate. Independent success was awarded at the actual draw.
+- Critical-mistake feedback, calculated capture replay, return to the unmodified game and retry of the original decision.
+- A simulated analysis interruption immediately after Qc4+ preserved the played move. Retry analysis recovered the original review, detected the exact win-to-draw mistake and exposed Kxc4 before continuing.
+- Saved progress across reload and backup export controls.
+- Desktop layout and a 375 × 812 same-origin mobile viewport. Mobile document width equals viewport width (360 px usable with scrollbar), with no horizontal overflow; fixed move controls and next-lesson navigation work.
+
+The flat phone bundle is generated from these same sources; the required worker JavaScript and WASM remain beside the embedded application HTML.
 
 ## Practical limits
 
-This environment provided Chromium, not a physical iPhone or Safari. The mobile check uses a constrained browser viewport; physical iOS/Safari performance and sound autoplay behavior have not been directly tested. Sounds are off by default and start only after user interaction.
+A physical iPhone/Safari device was not available; mobile layout was tested in Chromium at iPhone width. Exact results for uncached positions require internet access. If the tablebase is unavailable, feedback explicitly uses a Stockfish estimate; the exact guided filtering cannot be guaranteed for an uncached position offline.
 
-GitHub Pages deployment is prepared but was not performed: no GitHub account or new repository was connected. The app was served and exercised over HTTP in a local preview. The included workflow has been inspected and uses standard Pages actions; its first production run must be checked after upload.
-
-Live tablebase access requires internet. Cached audited positions remain available, and uncached failures fall back to clearly labeled engine estimates. Exact defensive-hold/promotion certification deliberately requires an exact result. A defensive hold milestone is distinct from an actual game draw. No claim of a complete offline tablebase, coach certification, or exhaustive browser/device testing is made.
+The release is GitHub Pages-ready but not automatically deployed. Full source, dependency lockfile, source PGNs, audits and these tests are included in the inner source archive. npm ci restores the pinned binary assets omitted from that inner archive; the outer phone package includes the ready-to-host binaries.
