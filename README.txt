@@ -1,4 +1,4 @@
-ENDGAME LAB V2.2 — IPHONE UPDATE
+ENDGAME LAB V3.0 — IPHONE UPDATE
 
 Use your EXISTING V2 repository. Leave the original Endgame-lab repository untouched.
 

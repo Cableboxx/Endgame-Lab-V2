@@ -53,3 +53,14 @@ Primary pawn instruction: Dr Dave Regis / Devon Junior Chess Association (DrDave
 Official Lichess Practice transfers: Piece Checkmates I https://lichess.org/study/BJy6fEDf , Opposition https://lichess.org/study/A4ujYOer , Key Squares https://lichess.org/study/xebrDvFe . Exact public chapter references and source positions appear in data/practice.json and the fact-only PGN archives; no comments were copied verbatim.
 
 Phone edition: application code, curriculum, cache, styles, and Cburnett artwork are embedded in index.html. The original library notices remain in the bundled JavaScript and the separate license documents. The full project source is in SOURCE-CODE.zip; npm ci restores pinned third-party binaries. esbuild 0.25.12 (MIT, https://github.com/evanw/esbuild) is a build-time tool and is not a runtime service.
+
+## V3.0 pathway expansion
+
+Published move facts are selected from 36 chapters in NoseKnowsAll's public studies:
+
+- Intermediate Endgames You Must Know! https://lichess.org/study/UsqmCsgC
+- More Endgames You Must Know! https://lichess.org/study/xtDSXkyi
+- Advanced Endgames You Must Know! https://lichess.org/study/UO2zqigQ
+- Rook Endgames You Must Know! https://lichess.org/study/bnboDhFM
+
+Exact chapter URLs and starting-ply offsets accompany each lesson and exercise. The course explanations are original Endgame Lab prose. Full instructional annotations are not redistributed in the new published-move archive. Reinforcement excerpts are identified rather than represented as new independent studies.
